@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-variant": "#353437",
+          "on-primary-fixed-variant": "#920020",
+          "on-primary-container": "#fffeff",
+          "tertiary": "#ffb3b3",
+          "primary-fixed": "#ffdad9",
+          "on-primary": "#680014",
+          "on-error-container": "#ffdad6",
+          "inverse-primary": "#bf002d",
+          "error": "#ffb4ab",
+          "primary-fixed-dim": "#ffb3b2",
+          "inverse-surface": "#e5e1e4",
+          "primary-container": "#e51e3e",
+          "on-surface": "#e5e1e4",
+          "surface-tint": "#ffb3b2",
+          "secondary-fixed": "#ffdad9",
+          "background": "#131315",
+          "outline": "#ad8887",
+          "primary": "#ffb3b2",
+          "surface-container-low": "#1c1b1e",
+          "surface": "#131315",
+          "on-secondary-fixed": "#400009",
+          "on-secondary": "#680015",
+          "surface-container": "#201f22",
+          "on-tertiary-container": "#fffeff",
+          "on-secondary-fixed-variant": "#920021",
+          "secondary-fixed-dim": "#ffb3b3",
+          "inverse-on-surface": "#313032",
+          "error-container": "#93000a",
+          "secondary": "#ffb3b3",
+          "outline-variant": "#5d3f3f",
+          "on-background": "#e5e1e4",
+          "on-tertiary-fixed": "#400009",
+          "on-tertiary-fixed-variant": "#80272e",
+          "on-secondary-container": "#fff1f0",
+          "surface-container-highest": "#353437",
+          "secondary-container": "#df0138",
+          "tertiary-container": "#bc555a",
+          "on-surface-variant": "#e6bdbc",
+          "surface-dim": "#131315",
+          "surface-bright": "#39393b",
+          "on-tertiary": "#61101a",
+          "tertiary-fixed-dim": "#ffb3b3",
+          "on-error": "#690005",
+          "surface-container-high": "#2a2a2c",
+          "tertiary-fixed": "#ffdad9",
+          "on-primary-fixed": "#410009",
+          "surface-container-lowest": "#0e0e10"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter": "1.25rem",
+          "margin-desktop": "3.5rem",
+          "space-xs": "0.25rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "margin": "1rem",
+          "margin-tablet": "2rem",
+          "space-lg": "1.5rem",
+          "gutter-desktop": "1.75rem",
+          "space-xl": "2.5rem"
+        },
+        "fontFamily": {
+          "display-hero-mobile": [
+            "Space Grotesk"
+          ],
+          "display-hero": [
+            "Space Grotesk"
+          ],
+          "label-lg": [
+            "JetBrains Mono"
+          ],
+          "label-md": [
+            "JetBrains Mono"
+          ],
+          "headline-sm": [
+            "Space Grotesk"
+          ],
+          "body-md": [
+            "Hanken Grotesk"
+          ],
+          "body-sm": [
+            "Hanken Grotesk"
+          ],
+          "body-lg": [
+            "Hanken Grotesk"
+          ],
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk"
+          ],
+          "headline-lg": [
+            "Space Grotesk"
+          ]
+        },
+        "fontSize": {
+          "display-hero-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "9px",
+            {
+              "lineHeight": "12px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-body-md text-on-background selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)] z-50 flex items-center justify-between px-space-md lg:px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #e51e3e
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UjnsabfTartzeTG3aKq-xLIBKyvrYzmqYWBd0nPqUQ6oAYnpSWXMeHQt3ps6jFNSnZ_II6Q6SjWk_ebd-OkvdYoENFC6Kn2MOh9wMZ9QOTzltPeAtuYnWgxcnEOSDfl-pU_ZlLlLk0sHmXSveEsLEKTMkKWp79Vzy8PkRLQE82T22L6kXaHMV9DmRAgMlwRmoYmUaPVeIGAdnAdn7SXPr1HV-hwaFt-RGxeGwWzaC1wxqoJK0PhI7SBwE"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase hidden sm:inline">AndyW Beats</span></div><div class="flex items-center px-space-xs py-0.5 bg-primary-container/20 rounded shadow-[0_0_12px_-2px_rgba(229,30,62,0.45)]"><span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Producer Admin</span></div></div><div class="flex items-center gap-space-md"><a class="hidden md:flex items-center text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#"><span class="material-symbols-outlined text-[16px] mr-1">arrow_back</span>Back to Storefront</a><div class="relative flex items-center justify-center"><button class="w-9 h-9 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest animate-pulse"></span></div><div class="h-6 w-px bg-surface-variant hidden sm:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden sm:flex flex-col text-right"><span class="font-headline-sm text-[13px] leading-tight text-on-surface font-semibold">AndyW</span><span class="font-label-sm text-label-sm text-primary uppercase">Master Producer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-xs text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase opacity-60">Production Console</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_15px_-3px_rgba(229,30,62,0.35)]"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 rounded transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_0_15px_-3px_rgba(229,30,62,0.35)]" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Dashboard</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="beats" href="#"><span class="material-symbols-outlined text-[20px]">graphic_eq</span>Beats</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="add-beat" href="#"><span class="material-symbols-outlined text-[20px]">upload_file</span>Add Beat</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span>Orders</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px]">group</span>Customers</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="licenses" href="#"><span class="material-symbols-outlined text-[20px]">verified</span>Licenses</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span>Analytics</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span>Settings</a></nav></div><div class="px-space-sm"><div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-2 h-2 rounded-full bg-primary animate-ping"></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Master Bus Online</span></div><span class="font-label-sm text-label-sm text-primary">48kHz/24b</span></div></div></aside><div class="pl-64"><main class="relative w-full pt-16 bg-background min-h-screen px-space-md lg:px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Command & Action Bar -->
+<section class="relative rounded-lg bg-surface-container-lowest p-space-md lg:p-space-lg overflow-hidden shadow-xl">
+<div class="absolute -top-24 -right-16 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">
+<span class="text-primary font-bold">CORE</span>
+<span>/</span>
+<span>ADMIN</span>
+<span>/</span>
+<span class="text-on-surface">DASHBOARD</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">Producer Studio Control</h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-widest animate-pulse">
+            Live Stream
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Master sonic telemetry, rights management &amp; catalog revenue pipeline.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<a class="group px-space-md py-2.5 rounded bg-surface-container hover:bg-surface-container-high transition-all text-on-surface font-headline-sm text-body-md flex items-center gap-2 shadow-sm" href="#storefront">
+<span class="material-symbols-outlined text-[18px] text-primary transition-transform group-hover:scale-110">storefront</span>
+<span>Live Store Preview</span>
+</a>
+<button class="px-space-md py-2.5 rounded bg-primary-container text-on-primary-container font-headline-sm text-body-md font-semibold flex items-center gap-2 shadow-[0_0_24px_-4px_rgba(229,30,62,0.6)] hover:brightness-110 active:scale-95 transition-all" id="quickUploadBtn">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Upload New Beat</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Metric Pulse Grids -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Stat 1 -->
+<div class="relative rounded-lg bg-surface-container-lowest p-space-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_-5px_rgba(229,30,62,0.35)] shadow-md group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Total Catalog</span>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">library_music</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight">42</span>
+<span class="font-headline-sm text-body-lg text-on-surface-variant">Tracks</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between">
+<span>38 Pub · 3 Draft · 1 Sold</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">+3 mo</span>
+</div>
+<div class="mt-3 w-full bg-surface-container rounded-full h-1 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 90.4%"></div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="relative rounded-lg bg-surface-container-lowest p-space-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_-5px_rgba(229,30,62,0.35)] shadow-md group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Total Auditions</span>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">hearing</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight">184.2K</span>
+<span class="font-headline-sm text-body-lg text-primary">+14.2%</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between">
+<span>Avg 4.3k/track</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> Surge
+        </span>
+</div>
+<div class="mt-3 w-full bg-surface-container rounded-full h-1 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 74%"></div>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="relative rounded-lg bg-surface-container-lowest p-space-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_-5px_rgba(229,30,62,0.35)] shadow-md group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Active Licenses</span>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight">318</span>
+<span class="font-headline-sm text-body-lg text-on-surface-variant">Issued</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between">
+<span>214 Basic · 89 Prem · 15 Excl</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">98.2% Del</span>
+</div>
+<div class="mt-3 w-full bg-surface-container rounded-full h-1 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="relative rounded-lg bg-surface-container-lowest p-space-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_-5px_rgba(229,30,62,0.35)] shadow-md group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Gross Revenue</span>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight">$18,450.00</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between">
+<span>Net earnings pipeline</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[12px] mr-0.5">north_east</span> +22.4%
+        </span>
+</div>
+<div class="mt-3 w-full bg-surface-container rounded-full h-1 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full shadow-[0_0_8px_rgba(229,30,62,0.7)]" style="width: 88%"></div>
+</div>
+</div>
+</section>
+<!-- Split View: Studio Engine (65%) & Live Operations Dock (35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column (8 of 12 cols = 66%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg min-w-0">
+<!-- Top Performing Beats Rack -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md lg:p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-5 bg-primary-container rounded-sm shadow-[0_0_10px_rgba(229,30,62,0.8)]"></span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-tight">Top Performing Beats</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Ranked by aggregate licensing volume and audience audition traction</p>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container p-1 rounded">
+<button class="px-2.5 py-1 text-on-surface font-label-sm text-label-sm bg-surface-container-high rounded uppercase font-semibold">30 Days</button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm rounded uppercase transition-colors">All Time</button>
+</div>
+</div>
+<!-- Leaderboard Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="text-on-surface-variant font-label-sm text-label-sm uppercase bg-surface-container-low">
+<th class="py-3 px-space-sm rounded-l">Track Designation</th>
+<th class="py-3 px-space-sm">Tuning &amp; Tempo</th>
+<th class="py-3 px-space-sm text-right">Auditions</th>
+<th class="py-3 px-space-sm text-right">Licenses</th>
+<th class="py-3 px-space-sm text-right">Net Yield</th>
+<th class="py-3 px-space-sm">State</th>
+<th class="py-3 px-space-sm text-right rounded-r">Commands</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Rank 1 -->
+<tr class="group hover:bg-surface-container-high/60 transition-colors bg-surface-container/20">
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-primary w-5">#1</span>
+<div class="relative w-10 h-10 rounded overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Dark crimson and obsidian graphic cover art featuring a stylized cyberpunk metallic skull with studio headphones on dark concrete background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU-zGbgUHtULo3JgSNkxodYc-rpddf7o13n5hBRPPFz5ozZDPMBG8vSEnaFJdGhkYuBK5nBg-6KGaGvEURbLsX9n3rrdFy_nOsmvmP-r9GCUY4_ghFWaXyblceQYSO5Noz5tu-Sh15AID_FH7Nb6wkN-dzMUXa9yk-eAAcC3hVxUEzRjLxBudAe5fHCD0gLB1ZU7ZVVMDuMiMk3pmcIkHmeg1008tr5p5n562cJwiV-TKfpE_PC-sr"/>
+<button class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-body-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">SAVAGE FLOW</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Trap Mastery</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-label-md text-label-md text-on-surface">145 BPM <span class="text-on-surface-variant">· D Min</span></td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">42.1K</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">84</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md font-semibold text-primary">$3,140.00</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+                    Published
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Edit Stems">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Detailed Analytics">
+<span class="material-symbols-outlined text-[16px]">bar_chart</span>
+</button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container rounded transition-colors" title="Store Page">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Rank 2 -->
+<tr class="group hover:bg-surface-container-high/60 transition-colors bg-surface-container-low/40">
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface-variant w-5">#2</span>
+<div class="relative w-10 h-10 rounded overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Night cityscape silhouette submerged in deep red and magenta neon haze with analog sound waves running along the horizon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3r1Of52ynGNb-bISZBV4KDWYxDtq0CX3F2IZmbw5Yy0QW_56Gg6Fc192rfSW8BTs6MqFx0jZMVxRtVFiS--TUdtb_tBQURm3CLPHo8v6qVmkZCTOablzJNbI7lRGSJRNdT2JIRnZCihKcxgBH_7wuQ_h0phluSlcEYuVFGYrJsUjsk9KKgMwydffx9Gf5wVAGOtr53mVURwjTdzzl8R81QB_cy9KOnSm8lzBLFJ3D5y6IQlpSClH6"/>
+<button class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-body-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">2AM IN DUBAI</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Dreamy R&amp;B</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-label-md text-label-md text-on-surface">140 BPM <span class="text-on-surface-variant">· A Min</span></td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">38.4K</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">72</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md font-semibold text-primary">$2,890.00</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+                    Published
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">bar_chart</span></button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">open_in_new</span></button>
+</div>
+</td>
+</tr>
+<!-- Rank 3 -->
+<tr class="group hover:bg-surface-container-high/60 transition-colors bg-surface-container/20">
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface-variant w-5">#3</span>
+<div class="relative w-10 h-10 rounded overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Minimalist luxury trap album cover showing polished platinum chains draped over a matte dark obsidian pedestal with glowing red light reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDBpAnwrwS5j4_SLx6BDgCM-A6JMYx7DbEW4A5jE177TqYWKzLhzxieJCu0JTsJ35aEysR5kc5QiOtNlcXNBPrpAP_2-ojQVztPA10Yupz4MLDpDmLWJ_7rwIitidUrr0G_TXVnHiqdJn8YY9HnWCpZgBaPtrrfTWkBJi79hGbt9UdSxgkBDC2qtmIZxW4PHbtAP9l6jCRpFapVdPZ6y2VtpSVjQWM-46ZF97z77rf6xOeaJ-I9pNy"/>
+<button class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-body-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">PLATINUM FLOW</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Luxury Trap</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-label-md text-label-md text-on-surface">142 BPM <span class="text-on-surface-variant">· C Min</span></td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">29.8K</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">56</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md font-semibold text-primary">$2,120.00</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+                    Published
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">bar_chart</span></button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">open_in_new</span></button>
+</div>
+</td>
+</tr>
+<!-- Rank 4 -->
+<tr class="group hover:bg-surface-container-high/60 transition-colors bg-surface-container-low/40">
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface-variant w-5">#4</span>
+<div class="relative w-10 h-10 rounded overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Surreal vintage clock melting over a crimson vinyl record inside an echoing acoustic recording room with dim red lamp light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLR61pVUkAQJCuq651l3jbOwuNlxgah-s7AxjOFzjloBIwLB7SO2ke_-upZso18rY0a3VmE6QXElqmJS-fC9GZuyqBhpp9EoNRW4aXm8R-qEbT7HJyzIIisyOevc3q1V4bI5foWKmx38grvH98IjDzpLFsdtU0YN7MKykNXiER2_8cQBsdVSQ_NZ0lFl8xp052SHjZvrXR9qUSnmI7PkTfyErjmAakjsdfEyQx5cgHpPqSav6NEQ8t"/>
+<button class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-body-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">TIME MOVES SLOW</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Late Night R&amp;B</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-label-md text-label-md text-on-surface">92 BPM <span class="text-on-surface-variant">· F# Min</span></td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">24.1K</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">48</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md font-semibold text-primary">$1,780.00</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+                    Published
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">bar_chart</span></button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">open_in_new</span></button>
+</div>
+</td>
+</tr>
+<!-- Rank 5 -->
+<tr class="group hover:bg-surface-container-high/60 transition-colors bg-surface-container/20">
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface-variant w-5">#5</span>
+<div class="relative w-10 h-10 rounded overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Monochrome dark drill album aesthetic with sharp crimson laser lines cutting across an abstract architectural corridor in complete darkness" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlkMU-AWUTj_brgSYujK-PnCOh1yXU4adirgHAOGrtAnNG_lGS0WFGTkEpOOBySE_xopgaqSX6b6bTCvmNhTQJqrf10Ilz0PGqm9N_RxAS1Zd3JhajPklQCSavXoSpvMPBTWQ2etUB11lpHrll2hpmdw4XvoFGT2ilfhb2TrXtpM3bZHrXX1pGtI7dJ8AczwyQHRWf6i_D0pC4XzI-KtteJbzEMkjZErEHxZWWsyv6grRE8hjLliem"/>
+<button class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-body-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">DARK NOCTURNE</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Dark Drill</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-label-md text-label-md text-on-surface">144 BPM <span class="text-on-surface-variant">· E Min</span></td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">19.5K</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">1 Excl</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md font-semibold text-primary">$599.00</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-surface-variant text-on-surface font-bold">
+                    Sold Exclusive
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">bar_chart</span></button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">lock</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Beat Catalog Releases Table -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md lg:p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-5 bg-primary-container rounded-sm shadow-[0_0_10px_rgba(229,30,62,0.8)]"></span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-tight">Recent Catalog Dispatches</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Full release roster, live lease anchors, and stem archive states</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[16px] text-on-surface-variant">search</span>
+<input class="pl-8 pr-3 py-1.5 bg-surface-container-low rounded text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors w-48 sm:w-60" placeholder="Filter stems, BPM, key..." type="text"/>
+</div>
+<button class="p-1.5 bg-surface-container hover:bg-surface-container-high rounded text-on-surface-variant hover:text-on-surface transition-colors" title="Export CSV">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="text-on-surface-variant font-label-sm text-label-sm uppercase bg-surface-container-low">
+<th class="py-2.5 px-space-sm rounded-l">Artwork &amp; Identity</th>
+<th class="py-2.5 px-space-sm">Sub-Genre</th>
+<th class="py-2.5 px-space-sm">BPM &amp; Scale</th>
+<th class="py-2.5 px-space-sm">Base Tag</th>
+<th class="py-2.5 px-space-sm">Catalog Status</th>
+<th class="py-2.5 px-space-sm text-right rounded-r">Manage</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Catalog Item 1 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Abstract glowing 808 audio waveform in crimson red floating over dark brutalist concrete structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9PDZyxumKbOsp0cT0kCL6PrNgH6ILsH4xtiI9yzQqIFEh5xDeVFhfUlRF1MdCFz-DAwuaQd0aif60i3Xih5s2_MdhYYT5uYFt_OEuBjVBNSGP53WbVa9pdubA32DIXA1P_pYeHEnQMSruW4W6cPbfg1XjqMk8izZZ6M1koduWRxxtOYHmj7BY7F8FN7HBGyq2CEKRdu0AdRzdGrj1NmC7Jw464tko6RiU9txbJHociW4ABW_t4IdZ"/>
+</div>
+<div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold">VENOM PROTOCOL</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">v2_master_clean.wav</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Rage Trap</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-on-surface">150 BPM · F# Min</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-primary font-semibold">$29.99</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Published
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Edit Metadata"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Duplicate Beat"><span class="material-symbols-outlined text-[16px]">content_copy</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Hide from Store"><span class="material-symbols-outlined text-[16px]">visibility_off</span></button>
+<button class="p-1 hover:text-error hover:bg-surface-container-high rounded transition-colors" title="Purge Record"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Catalog Item 2 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Deep crimson neon illuminated vintage drum machine sampler with VU meters glowing red in a dark control room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqNU93Z5W0MI_6c7jV59rpconiWFngUYz_c_WanSnrn0I0mH_sPR8ZrL1lc5GZy-Qhvb3W4RXCr3AUeh3HBEI8CQupuldevCWweDN9UF2n9s0ibC6X9v6fumjudbTICO8SdAtD30fBeLzTWWgz89bGZzmzHxDSO7tZ44LP-r0hDmJYJcex61qU7LjA762vApiT1XO_sOLH0izyl-3esIhVu5gU1ku5e4olYJNC7MxuZgdhcqJc4NgN"/>
+</div>
+<div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold">MIDNIGHT VIBES</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">unmastered_bounce.wav</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Lo-Fi Soul</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-on-surface">86 BPM · Eb Maj</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-primary font-semibold">$34.99</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-surface-container-high text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Draft
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">content_copy</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">visibility</span></button>
+<button class="p-1 hover:text-error hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Catalog Item 3 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Futuristic dark metallic guitar amp with red glowing tubes and industrial studio patch cables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqnUdSVgxZt0YyL5dOtpeGCYu7FdlEJoiRXKRQCo-_376kQW6GezCzG-qxkkADE6_sO6KtAvBFm2tMf4aw6dNMxzS5bhxpQPpgdcSMcfFWF_B-wCGriNC0emNm-amZiNu-y9DWtVWzV_Pt1iBfKd4DI1eJ9AaEAkOksF1lp7HY93hW7OGLdue0ELiR7a_LcXzY6wH0oV9YDy8wdtaxyo0_FZ6ULFPTRTiWPrjrYvq62W7G454NarPq"/>
+</div>
+<div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold">CORONA ECLIPSE</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">final_tracked_out.zip</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Hard Drill</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-on-surface">143 BPM · G Min</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-primary font-semibold">$599.00</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-surface-variant text-on-surface font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Exclusive Sold
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">lock_reset</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">description</span></button>
+<button class="p-1 hover:text-error hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">archive</span></button>
+</div>
+</td>
+</tr>
+<!-- Catalog Item 4 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Geometric vinyl disc reflecting intense crimson red neon spotlight against obsidian tile studio floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVtlKrE4oVX6FBfOOr6-ecPNSxE8cpXSkTicQiLStapI9PiUAGGpznBT1n9ZWD0PgCkPWuenSsAxifsM8iE3gzerDo6CB_HHzMEBA2aB5CUe5D0CgdJi1wDZL1InyCEoZD_FyGHBnimfZsY7WlCKAugVW8jFzLEs1A6o9pMwwFhcf1ImfVhsZpMxRjazcFWtyDjrDz3_yVQn_LPPZohjPAoISSekIVtEMxVtSUFFgbAYgMCbJOmCfg"/>
+</div>
+<div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold">CALLING</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">calling_premaster.wav</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Afro Trap</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-on-surface">104 BPM · B Min</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-primary font-semibold">$29.99</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Published
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">content_copy</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">visibility_off</span></button>
+<button class="p-1 hover:text-error hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Right Column (4 of 12 cols = 33%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Real-Time License Transaction Stream -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-tight">Recent Orders</h3>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase">Live Auth</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verified checkout and automated rights dispatch log</p>
+<div class="mt-space-xs flex flex-col gap-2.5">
+<!-- Sale Item 1 -->
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">album</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">SAVAGE FLOW</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-primary">$79.99</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">@kidd_flamez</span>
+<span>24m ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1 border-t border-surface-variant/40">
+<span class="text-primary-fixed-dim">Premium Stems License</span>
+<span class="text-[11px] text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> WAV+Stems Link
+              </span>
+</div>
+</div>
+<!-- Sale Item 2 -->
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">album</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">2AM IN DUBAI</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-primary">$29.99</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">@marcus_vocal</span>
+<span>1h ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1 border-t border-surface-variant/40">
+<span>Basic Lease</span>
+<span class="text-[11px] text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> MP3 Delivered
+              </span>
+</div>
+</div>
+<!-- Sale Item 3 (Exclusive) -->
+<div class="p-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-all flex flex-col gap-1.5 group shadow-[0_0_15px_-4px_rgba(229,30,62,0.3)]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">workspace_premium</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">DARK NOCTURNE</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-primary">$599.00</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">@apex_sound_mgmt</span>
+<span>5h ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1 border-t border-surface-variant/40">
+<span class="text-primary font-semibold">Exclusive Buyout</span>
+<span class="text-[11px] text-primary-fixed-dim">Delisted &amp; Archived</span>
+</div>
+</div>
+<!-- Sale Item 4 -->
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">album</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">CALLING</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-primary">$29.99</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">@trey_beats</span>
+<span>8h ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1 border-t border-surface-variant/40">
+<span>Basic Lease</span>
+<span class="text-[11px] text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> MP3 Delivered
+              </span>
+</div>
+</div>
+</div>
+<a class="w-full mt-space-xs py-2 text-center text-primary hover:text-on-primary-container bg-surface-container hover:bg-primary-container font-label-sm text-label-sm uppercase font-semibold rounded transition-all" href="#orders">
+          Inspect All 318 License Contracts
+        </a>
+</section>
+<!-- Quick Upload Drop Zone -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-tight">Audio Ingest Hub</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Studio Upload</span>
+</div>
+<div class="group relative rounded-lg bg-surface-container-low/60 hover:bg-surface-container p-space-lg flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200" id="dropZone">
+<div class="w-12 h-12 rounded-full bg-surface-container group-hover:bg-primary-container flex items-center justify-center text-primary group-hover:text-on-primary-container transition-all group-hover:scale-110 mb-space-sm shadow-[0_0_12px_rgba(229,30,62,0.35)]">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold mb-1">
+            Drop Unmastered Audio Here
+          </div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-space-sm max-w-xs">
+            Lossless WAV, AIFF, or 320kbps MP3. Auto-detected BPM and harmonic root detection enabled.
+          </p>
+<button class="px-space-md py-1.5 rounded bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-sm text-label-sm uppercase font-semibold transition-all">
+            Browse Hard Drive
+          </button>
+<input accept=".mp3,.wav,.aif,.zip" class="hidden" id="fileInput" type="file"/>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant px-1">
+<span>Target Stem Vault: S3 Secure</span>
+<span>Max File: 1.2 GB</span>
+</div>
+</section>
+<!-- Infrastructure & API Health Notice -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md shadow-xl flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Production Engine Telemetry</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Backend API endpoints configured for secure uploads, cloud stem vaults, and automated PDF license generation upon checkout.
+        </p>
+<div class="grid grid-cols-2 gap-2 mt-1 font-label-sm text-label-sm">
+<div class="p-2 rounded bg-surface-container-low flex flex-col gap-0.5">
+<span class="text-on-surface-variant">Stem Vault Latency</span>
+<span class="text-on-surface font-semibold text-primary">28ms (Optimal)</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex flex-col gap-0.5">
+<span class="text-on-surface-variant">Stripe Split Auth</span>
+<span class="text-on-surface font-semibold text-primary">Instant Webhook</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  // Producer Quick Ingest Micro-Interaction
+  (function() {
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const quickUploadBtn = document.getElementById('quickUploadBtn');
+
+    if (dropZone && fileInput) {
+      dropZone.addEventListener('click', () => fileInput.click());
+      
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.classList.add('bg-surface-container-high', 'scale-[0.99]');
+        }, false);
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.classList.remove('bg-surface-container-high', 'scale-[0.99]');
+        }, false);
+      });
+
+      dropZone.addEventListener('drop', (e) => {
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+          alert('Ingesting: ' + files[0].name + ' into the AndyW Producer Studio Stem Engine...');
+        }
+      });
+
+      fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+          alert('Preparing ' + fileInput.files[0].name + ' for multi-track stem tagging...');
+        }
+      });
+    }
+
+    if (quickUploadBtn && fileInput) {
+      quickUploadBtn.addEventListener('click', () => fileInput.click());
+    }
+  })();
+</script></main></div></body></html>
