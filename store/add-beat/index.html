@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-variant": "#353437",
+          "on-primary-fixed-variant": "#920020",
+          "on-primary-container": "#fffeff",
+          "tertiary": "#ffb3b3",
+          "primary-fixed": "#ffdad9",
+          "on-primary": "#680014",
+          "on-error-container": "#ffdad6",
+          "inverse-primary": "#bf002d",
+          "error": "#ffb4ab",
+          "primary-fixed-dim": "#ffb3b2",
+          "inverse-surface": "#e5e1e4",
+          "primary-container": "#e51e3e",
+          "on-surface": "#e5e1e4",
+          "surface-tint": "#ffb3b2",
+          "secondary-fixed": "#ffdad9",
+          "background": "#131315",
+          "outline": "#ad8887",
+          "primary": "#ffb3b2",
+          "surface-container-low": "#1c1b1e",
+          "surface": "#131315",
+          "on-secondary-fixed": "#400009",
+          "on-secondary": "#680015",
+          "surface-container": "#201f22",
+          "on-tertiary-container": "#fffeff",
+          "on-secondary-fixed-variant": "#920021",
+          "secondary-fixed-dim": "#ffb3b3",
+          "inverse-on-surface": "#313032",
+          "error-container": "#93000a",
+          "secondary": "#ffb3b3",
+          "outline-variant": "#5d3f3f",
+          "on-background": "#e5e1e4",
+          "on-tertiary-fixed": "#400009",
+          "on-tertiary-fixed-variant": "#80272e",
+          "on-secondary-container": "#fff1f0",
+          "surface-container-highest": "#353437",
+          "secondary-container": "#df0138",
+          "tertiary-container": "#bc555a",
+          "on-surface-variant": "#e6bdbc",
+          "surface-dim": "#131315",
+          "surface-bright": "#39393b",
+          "on-tertiary": "#61101a",
+          "tertiary-fixed-dim": "#ffb3b3",
+          "on-error": "#690005",
+          "surface-container-high": "#2a2a2c",
+          "tertiary-fixed": "#ffdad9",
+          "on-primary-fixed": "#410009",
+          "surface-container-lowest": "#0e0e10"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter": "1.25rem",
+          "margin-desktop": "3.5rem",
+          "space-xs": "0.25rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "margin": "1rem",
+          "margin-tablet": "2rem",
+          "space-lg": "1.5rem",
+          "gutter-desktop": "1.75rem",
+          "space-xl": "2.5rem"
+        },
+        "fontFamily": {
+          "display-hero-mobile": [
+            "Space Grotesk"
+          ],
+          "display-hero": [
+            "Space Grotesk"
+          ],
+          "label-lg": [
+            "JetBrains Mono"
+          ],
+          "label-md": [
+            "JetBrains Mono"
+          ],
+          "headline-sm": [
+            "Space Grotesk"
+          ],
+          "body-md": [
+            "Hanken Grotesk"
+          ],
+          "body-sm": [
+            "Hanken Grotesk"
+          ],
+          "body-lg": [
+            "Hanken Grotesk"
+          ],
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk"
+          ],
+          "headline-lg": [
+            "Space Grotesk"
+          ]
+        },
+        "fontSize": {
+          "display-hero-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "9px",
+            {
+              "lineHeight": "12px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-body-md text-on-background selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)] z-50 flex items-center justify-between px-space-md lg:px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #e51e3e
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UjnsabfTartzeTG3aKq-xLIBKyvrYzmqYWBd0nPqUQ6oAYnpSWXMeHQt3ps6jFNSnZ_II6Q6SjWk_ebd-OkvdYoENFC6Kn2MOh9wMZ9QOTzltPeAtuYnWgxcnEOSDfl-pU_ZlLlLk0sHmXSveEsLEKTMkKWp79Vzy8PkRLQE82T22L6kXaHMV9DmRAgMlwRmoYmUaPVeIGAdnAdn7SXPr1HV-hwaFt-RGxeGwWzaC1wxqoJK0PhI7SBwE"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase hidden sm:inline">AndyW Beats</span></div><div class="flex items-center px-space-xs py-0.5 bg-primary-container/20 rounded shadow-[0_0_12px_-2px_rgba(229,30,62,0.45)]"><span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Producer Admin</span></div></div><div class="flex items-center gap-space-md"><a class="hidden md:flex items-center text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#"><span class="material-symbols-outlined text-[16px] mr-1">arrow_back</span>Back to Storefront</a><div class="relative flex items-center justify-center"><button class="w-9 h-9 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest animate-pulse"></span></div><div class="h-6 w-px bg-surface-variant hidden sm:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden sm:flex flex-col text-right"><span class="font-headline-sm text-[13px] leading-tight text-on-surface font-semibold">AndyW</span><span class="font-label-sm text-label-sm text-primary uppercase">Master Producer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-xs text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase opacity-60">Production Console</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_15px_-3px_rgba(229,30,62,0.35)]"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Dashboard</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="beats" href="#"><span class="material-symbols-outlined text-[20px]">graphic_eq</span>Beats</a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 rounded transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_0_15px_-3px_rgba(229,30,62,0.35)]" data-path="add-beat" href="#"><span class="material-symbols-outlined text-[20px]">upload_file</span>Add Beat</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span>Orders</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px]">group</span>Customers</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="licenses" href="#"><span class="material-symbols-outlined text-[20px]">verified</span>Licenses</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span>Analytics</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span>Settings</a></nav></div><div class="px-space-sm"><div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-2 h-2 rounded-full bg-primary animate-ping"></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Master Bus Online</span></div><span class="font-label-sm text-label-sm text-primary">48kHz/24b</span></div></div></aside><div class="pl-64"><main class="relative w-full pt-16 bg-background min-h-screen px-space-md lg:px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Bar / Studio Header -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md pb-space-md border-b-0">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm tracking-widest uppercase shadow-[0_0_12px_-2px_rgba(229,30,62,0.45)]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Beat Configurator
+        </span>
+<span class="text-on-surface-variant font-label-md text-label-md">DSP-REV-094</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">ADD NEW BEAT &amp; LICENSE CONFIGURATOR</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Upload master audio, assign cartoon trap character artwork, configure licensing pricing tiers, and publish directly to the live AndyW Beats marketplace.</p>
+</div>
+<!-- Status & Fast Switch -->
+<div class="flex items-center gap-space-md self-start xl:self-auto bg-surface-container p-2 rounded shadow-md">
+<div class="flex items-center gap-2 px-space-sm py-1">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant transition-colors" id="status-pip"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant" id="status-label">Draft Mode • Unpublished</span>
+</div>
+<button class="px-space-md py-1.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm tracking-wider uppercase transition-all shadow-sm" id="toggle-live-status" type="button">
+        Push To Store
+      </button>
+</div>
+</div>
+<!-- Main 2-Column Responsive Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT 60% PIPELINE COLUMN -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- SECTION 1: CORE METADATA -->
+<div class="bg-surface-container-low rounded p-space-md lg:p-space-lg shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-primary-container/5 blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary px-1.5 py-0.5 bg-primary-container/20 rounded">01</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface">Core Beat Metadata</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Global Catalog Sync</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Title -->
+<div class="md:col-span-12 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Beat Title</label>
+<input class="w-full bg-surface-container-lowest text-on-surface px-space-md py-2.5 rounded font-headline-sm text-headline-sm tracking-wide focus:outline-none focus:bg-surface-container focus:shadow-[0_0_12px_rgba(229,30,62,0.35)] transition-all" id="input-title" type="text" value="SAVAGE FLOW 5"/>
+</div>
+<!-- Genre -->
+<div class="md:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Genre</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-lowest text-on-surface px-space-md py-2.5 rounded font-label-md text-label-md focus:outline-none focus:bg-surface-container transition-all" id="input-genre">
+<option selected="" value="Trap">Trap</option>
+<option value="Hip-Hop">Hip-Hop</option>
+<option value="Drill">Drill</option>
+<option value="Melodic Trap">Melodic Trap</option>
+<option value="R&amp;B Trap">R&amp;B Trap</option>
+<option value="Underground Drill">Underground Drill</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- BPM -->
+<div class="md:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Tempo (BPM)</label>
+<input class="w-full bg-surface-container-lowest text-on-surface px-space-md py-2.5 rounded font-label-lg text-label-lg focus:outline-none focus:bg-surface-container transition-all" id="input-bpm" type="number" value="145"/>
+</div>
+<!-- Key -->
+<div class="md:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Musical Key</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-lowest text-on-surface px-space-md py-2.5 rounded font-label-md text-label-md focus:outline-none focus:bg-surface-container transition-all" id="input-key">
+<option selected="" value="D Minor">D Minor (Dm)</option>
+<option value="C Minor">C Minor (Cm)</option>
+<option value="F# Minor">F# Minor (F#m)</option>
+<option value="G Minor">G Minor (Gm)</option>
+<option value="A Minor">A Minor (Am)</option>
+<option value="E Minor">E Minor (Em)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Mood -->
+<div class="md:col-span-12 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Acoustic &amp; Mood Classification</label>
+<input class="w-full bg-surface-container-lowest text-on-surface px-space-md py-2 rounded font-body-md text-body-md focus:outline-none focus:bg-surface-container transition-all" id="input-mood" type="text" value="Aggressive / Dark / Underground"/>
+</div>
+<!-- Description -->
+<div class="md:col-span-12 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Sonic Description / Liner Notes</label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface px-space-md py-2 rounded font-body-md text-body-md focus:outline-none focus:bg-surface-container transition-all resize-none" id="input-desc" rows="3">Hard-hitting underground 808s, sliding drill percussion, and dark atmospheric choir synths. Tailored for aggressive melodic vocalists and high-energy records.</textarea>
+</div>
+<!-- Search / Marketplace Tags -->
+<div class="md:col-span-12 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Marketplace Discovery Tags</label>
+<span class="font-label-sm text-label-sm text-primary">6 / 10 Max</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 p-2 bg-surface-container-lowest rounded min-h-[46px]" id="tags-container">
+<span class="inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded font-label-md text-label-md text-on-surface">
+                #trap <button class="hover:text-primary transition-colors remove-tag" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded font-label-md text-label-md text-on-surface">
+                #dark-trap <button class="hover:text-primary transition-colors remove-tag" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded font-label-md text-label-md text-on-surface">
+                #aggressive <button class="hover:text-primary transition-colors remove-tag" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded font-label-md text-label-md text-on-surface">
+                #hiphop <button class="hover:text-primary transition-colors remove-tag" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded font-label-md text-label-md text-on-surface">
+                #808 <button class="hover:text-primary transition-colors remove-tag" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded font-label-md text-label-md text-on-surface">
+                #drill <button class="hover:text-primary transition-colors remove-tag" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<input class="bg-transparent text-on-surface font-label-md text-label-md px-2 py-0.5 focus:outline-none placeholder:text-surface-variant flex-1 min-w-[90px]" id="tag-input" placeholder="+ Add tag..." type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: ARTWORK UPLOAD -->
+<div class="bg-surface-container-low rounded p-space-md lg:p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary px-1.5 py-0.5 bg-primary-container/20 rounded">02</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface">Cover Artwork Pipeline</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">1:1 Square (2000x2000)</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<!-- Square Dropzone / Graphic Viewport -->
+<div class="md:col-span-5 aspect-square relative rounded bg-surface-container-lowest overflow-hidden shadow-md group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Stylized edgy 2D cartoon trap music producer character wearing an oversized matte black streetwear hoodie with crimson red inner lining, wearing glowing dark-tinted visor glasses that emit a crimson light, an iced-out heavy cuban link chain around the neck, set against a dark moody recording studio backdrop filled with illuminated rack gear meters and ambient red smoke" id="artwork-display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIFukDcYk4FkWQpKy7EY2D3wxs99998sOczr3xQoSO6E0ZKg757xeJ8OMj606rcib2-qJiCN_wTqQgDphvVubD4OsYUAzdPRZ4k1gzZhSW8JVNPVx--e9Odr_hOyVb3yR1H0jbISF-kansEb41vveyAnLKmUd2BlQ2hnbZf0bhSHljfHFwkMwXXIxMo89yGj97USqiq49gfPRuxuKHDBub7z5zUR0cmTy2ipi2wIfSkxN2jm23kCYS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex flex-col justify-end p-3">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Active Trap Mascot Cover</span>
+<span class="font-body-sm text-body-sm text-on-surface">savage_flow_5_mascot_final.png</span>
+</div>
+<div class="absolute top-2 right-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-label-sm text-label-sm text-on-surface">
+              2400 x 2400 px
+            </div>
+</div>
+<!-- Upload Controls & Specification -->
+<div class="md:col-span-7 flex flex-col gap-space-sm">
+<div class="bg-surface-container p-space-sm rounded flex flex-col gap-1">
+<div class="flex items-center gap-2 text-primary font-headline-sm text-body-md">
+<span class="material-symbols-outlined text-[18px]">palette</span>
+                AndyW Mascot Signature Format
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Artwork is automatically pre-processed with our signature high-contrast trap border rim and synced across the live store, licensing contracts, and digital invoice metadata.
+              </p>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<div class="flex items-center gap-space-sm">
+<button class="flex-1 px-space-md py-2.5 rounded bg-primary-container hover:bg-secondary-container text-on-primary-container font-headline-sm text-body-md flex items-center justify-center gap-2 shadow-[0_0_15px_-3px_rgba(229,30,62,0.4)] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+                  Upload New Artwork
+                </button>
+<button class="px-space-md py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-body-md flex items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+                  Replace
+                </button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center md:text-left">Supported: JPG, PNG, WEBP. Maximum file size: 25MB.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: AUDIO ASSET VAULT -->
+<div class="bg-surface-container-low rounded p-space-md lg:p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary px-1.5 py-0.5 bg-primary-container/20 rounded">03</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface">Audio Asset Vault</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Dual-Layer Architecture
+          </span>
+</div>
+<!-- Box A: Public Audition -->
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<h3 class="font-headline-sm text-body-lg text-on-surface uppercase">A. Public Audition (Stream Preview)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Public HTTP Streaming Layer</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            This is the <span class="text-primary font-semibold">only audio file</span> streamed to public visitors on the storefront. Ensure regular vocal watermarks ("AndyW on the beat") are rendered into this file.
+          </p>
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<button class="w-10 h-10 rounded bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_12px_rgba(229,30,62,0.4)] hover:scale-105 transition-all flex-shrink-0" id="play-audition-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">play_arrow</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-on-surface truncate">Savage_Flow_5_tagged_preview.mp3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">320kbps MP3 • 3:24 • AndyW Tagged (every 30s)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+<span class="font-label-sm text-label-sm text-primary px-2 py-1 rounded bg-primary-container/10">Active Stream</span>
+<button class="px-space-sm py-1.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm tracking-wide uppercase transition-colors" type="button">
+                Re-Upload
+              </button>
+</div>
+</div>
+</div>
+<!-- Box B: Protected Master Assets -->
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-sm relative">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">security</span>
+<h3 class="font-headline-sm text-body-lg text-on-surface uppercase">B. Protected Master Assets (Secure Vault)</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-container/20 text-primary uppercase tracking-wider font-semibold">AES-256 Cloud Locked</span>
+</div>
+<div class="p-2.5 rounded bg-primary-container/10 flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">lock</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">Encrypted &amp; Private.</span> Delivered exclusively via signed post-purchase download tokens. Files in this vault are strictly air-gapped from storefront audio elements.
+            </p>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<!-- WAV Master Row -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">audio_file</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-on-surface">Savage_Flow_5_24bit_Master.wav</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lossless Master • 24-bit / 48kHz • 58.2 MB</span>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-auto">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Ready
+                </span>
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm uppercase transition-colors" type="button">Replace</button>
+</div>
+</div>
+<!-- Stems Row -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">folder_zip</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-on-surface">Savage_Flow_5_Stems_Separated.zip</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Full Trackout (22 Audio Channels) • 245 MB</span>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-auto">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Ready
+                </span>
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm uppercase transition-colors" type="button">Replace</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: TIERED LICENSE PRICING -->
+<div class="bg-surface-container-low rounded p-space-md lg:p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary px-1.5 py-0.5 bg-primary-container/20 rounded">04</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface">Tiered License Matrix</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Configure Custom Terms</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Card 1: Basic Lease -->
+<div class="bg-surface-container p-space-md rounded flex flex-col justify-between gap-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-lg uppercase text-on-surface">Basic Lease</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MP3 Only</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">100k Streams • 1 Music Video • Distribution Rights</span>
+</div>
+<div class="pt-2 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Price (USD)</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-headline-md text-headline-md text-primary">$</span>
+<input class="w-full bg-surface-container-lowest text-on-surface pl-8 pr-3 py-2 rounded font-headline-md text-headline-md focus:outline-none focus:bg-surface-container-high transition-all" id="price-basic" type="text" value="9.99"/>
+</div>
+</div>
+</div>
+<!-- Card 2: Premium License -->
+<div class="bg-surface-container p-space-md rounded flex flex-col justify-between gap-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-lg uppercase text-on-surface">Premium License</span>
+<span class="font-label-sm text-label-sm text-primary">WAV + MP3</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">500k Streams • Radio Play • Lossless Audio</span>
+</div>
+<div class="pt-2 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Price (USD)</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-headline-md text-headline-md text-primary">$</span>
+<input class="w-full bg-surface-container-lowest text-on-surface pl-8 pr-3 py-2 rounded font-headline-md text-headline-md focus:outline-none focus:bg-surface-container-high transition-all" id="price-premium" type="text" value="19.99"/>
+</div>
+</div>
+</div>
+<!-- Card 3: Premium + Stems -->
+<div class="bg-surface-container p-space-md rounded flex flex-col justify-between gap-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-lg uppercase text-on-surface">Premium + Stems</span>
+<span class="font-label-sm text-label-sm text-primary">Trackout ZIP</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Unlimited Streams • Uncut Stem Mix • Commercial</span>
+</div>
+<div class="pt-2 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Price (USD)</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-headline-md text-headline-md text-primary">$</span>
+<input class="w-full bg-surface-container-lowest text-on-surface pl-8 pr-3 py-2 rounded font-headline-md text-headline-md focus:outline-none focus:bg-surface-container-high transition-all" id="price-stems" type="text" value="29.99"/>
+</div>
+</div>
+</div>
+<!-- Card 4: Exclusive Buyout -->
+<div class="bg-surface-container p-space-md rounded flex flex-col justify-between gap-space-sm shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute right-0 top-0 w-16 h-16 bg-primary-container/10 rounded-bl-full pointer-events-none"></div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-lg uppercase text-on-surface">Exclusive Buyout</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Sold Outright</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Full Master Ownership • Auto Storefront Delist</span>
+</div>
+<div class="pt-2 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Price (USD)</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-headline-md text-headline-md text-primary">$</span>
+<input class="w-full bg-surface-container-lowest text-on-surface pl-8 pr-3 py-2 rounded font-headline-md text-headline-md focus:outline-none focus:bg-surface-container-high transition-all" id="price-exclusive" type="text" value="99.99"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 5: ACTION FOOTER -->
+<div class="flex flex-col gap-space-md pt-2">
+<div class="p-space-md rounded bg-primary-container/10 flex items-center gap-space-sm shadow-inner">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Your beat is ready to appear in the live AndyW Beats marketplace upon publishing. Audio and metadata validation checks have passed.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pb-space-lg">
+<button class="w-full sm:w-auto px-space-md py-3 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-body-md transition-colors" type="button">
+            Save Draft
+          </button>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto px-space-md py-3 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-headline-sm text-body-md transition-colors flex items-center justify-center gap-2" id="btn-preview-scroll" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+              Inspect Preview
+            </button>
+<button class="w-full sm:w-auto px-space-xl py-3 rounded bg-primary-container hover:bg-secondary-container text-on-primary-container font-headline-sm text-headline-sm uppercase tracking-wide flex items-center justify-center gap-2 shadow-[0_0_24px_-2px_rgba(229,30,62,0.6)] hover:shadow-[0_0_32px_rgba(229,30,62,0.8)] transition-all" id="btn-publish-main" type="button">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+              Publish Beat
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT 40% LIVE STOREFRONT PREVIEW COLUMN -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg lg:sticky lg:top-20">
+<!-- Preview Header & Frame -->
+<div class="bg-surface-container-low rounded p-space-md lg:p-space-lg shadow-xl flex flex-col gap-space-md relative">
+<div class="flex items-center justify-between border-b-0 pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">storefront</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface">Storefront Appearance</h2>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-highest">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase">Live Rendering</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          This preview mirrors the public BeatStars-style discovery grid. When marked Published, it instantly indexes in search and genre filters.
+        </p>
+<!-- STOREFRONT BEAT CARD MOCKUP -->
+<div class="bg-surface-container-lowest rounded overflow-hidden shadow-2xl transition-all duration-300 group flex flex-col">
+<!-- Artwork Viewport with Audio Overlay -->
+<div class="relative aspect-square w-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Stylized edgy 2D cartoon trap music producer character wearing an oversized matte black streetwear hoodie with crimson red inner lining, wearing glowing dark-tinted visor glasses that emit a crimson light, an iced-out heavy cuban link chain around the neck, set against a dark moody recording studio backdrop filled with illuminated rack gear meters and ambient red smoke" id="storefront-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0mkk89yd4ZyvkFQn-Kv3mXgRX9ZLXhyTMimjKNsruWQchnScp66ma6PMNiTpODo2ZgL_VWA14g7W76a4Mqq_5njbdINmi4kChLKlEojA1T0ihPzvaGL-i3EOsV9sZCdSOFutmqfxdxextmM7EN3m05MrKPdZNM3lLfnkp9EbQNjM7r_O4E4U2e2JUFkJW6dK9-0seY5vL7IC7b-wZfOdz2l0umXKYHfKfI4ISnNe0XiljLdRlzoYr"/>
+<!-- Vignette & Glow Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<!-- Top floating chips -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-semibold shadow-md" id="preview-genre-pill">
+                TRAP
+              </span>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-md">
+                  HOT
+                </span>
+</div>
+</div>
+<!-- Central Floating Play Button -->
+<button class="absolute inset-0 m-auto w-16 h-16 rounded-full bg-primary-container/95 text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(229,30,62,0.7)] group-hover:scale-110 transition-transform" id="preview-play-toggle" type="button">
+<span class="material-symbols-outlined text-[34px] ml-1">play_arrow</span>
+</button>
+<!-- Bottom Waveform Scrub Area -->
+<div class="absolute bottom-3 left-3 right-3 flex flex-col gap-1.5 p-2 rounded bg-surface-container-lowest/80 backdrop-blur-md shadow-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span id="waveform-timer">0:45</span>
+<span class="text-primary font-semibold">TAGGED AUDITION</span>
+<span>3:24</span>
+</div>
+<!-- Animated / Interactive Waveform micro-bars -->
+<div class="h-7 w-full flex items-end justify-between gap-0.5 overflow-hidden">
+<div class="w-1 bg-primary h-[35%] rounded-t"></div>
+<div class="w-1 bg-primary h-[60%] rounded-t"></div>
+<div class="w-1 bg-primary h-[85%] rounded-t"></div>
+<div class="w-1 bg-primary h-[40%] rounded-t"></div>
+<div class="w-1 bg-primary h-[95%] rounded-t"></div>
+<div class="w-1 bg-primary h-[70%] rounded-t"></div>
+<div class="w-1 bg-primary h-[80%] rounded-t"></div>
+<div class="w-1 bg-primary h-[50%] rounded-t"></div>
+<div class="w-1 bg-primary h-[65%] rounded-t"></div>
+<div class="w-1 bg-primary h-[90%] rounded-t"></div>
+<!-- Playhead divider -->
+<div class="w-0.5 bg-on-surface h-full shadow-[0_0_8px_#ffffff]"></div>
+<div class="w-1 bg-surface-variant h-[45%] rounded-t"></div>
+<div class="w-1 bg-surface-variant h-[75%] rounded-t"></div>
+<div class="w-1 bg-surface-variant h-[30%] rounded-t"></div>
+<div class="w-1 bg-surface-variant h-[55%] rounded-t"></div>
+<div class="w-1 bg-surface-variant h-[80%] rounded-t"></div>
+<div class="w-1 bg-surface-variant h-[40%] rounded-t"></div>
+<div class="w-1 bg-surface-variant h-[60%] rounded-t"></div>
+<div class="w-1 bg-surface-variant h-[35%] rounded-t"></div>
+<div class="w-1 bg-surface-variant h-[50%] rounded-t"></div>
+<div class="w-1 bg-surface-variant h-[20%] rounded-t"></div>
+</div>
+</div>
+</div>
+<!-- Card Content Body -->
+<div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface truncate" id="preview-title">SAVAGE FLOW 5</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prod. AndyW • AndyW Beats Official</span>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Starting at</span>
+<span class="font-headline-md text-headline-md text-primary font-bold" id="preview-start-price">$9.99</span>
+</div>
+</div>
+<!-- Metadata specs -->
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm py-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-semibold text-on-surface" id="preview-bpm-spec">145 BPM</span>
+<span class="text-surface-variant">•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-semibold text-on-surface" id="preview-key-spec">D MINOR</span>
+<span class="text-surface-variant">•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">FLAC/WAV</span>
+</div>
+<!-- Primary CTAs -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="px-space-sm py-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-body-md flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+                Preview
+              </button>
+<button class="px-space-sm py-2 rounded bg-primary-container hover:bg-secondary-container text-on-primary-container font-headline-sm text-body-md flex items-center justify-center gap-1.5 shadow-[0_0_12px_rgba(229,30,62,0.4)] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                License Now
+              </button>
+</div>
+</div>
+</div>
+<!-- Beat Management Quick Actions -->
+<div class="bg-surface-container p-space-md rounded flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-md uppercase text-on-surface">Lifecycle State</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Catalog Routing</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="accent-[#e51e3e]" name="beat-lifecycle" type="radio" value="draft"/>
+<span class="font-label-md text-label-md text-on-surface">Draft</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="accent-[#e51e3e]" name="beat-lifecycle" type="radio" value="published"/>
+<span class="font-label-md text-label-md text-on-surface">Published</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="accent-[#e51e3e]" name="beat-lifecycle" type="radio" value="exclusive"/>
+<span class="font-label-md text-label-md text-on-surface">Sold Outright</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="accent-[#e51e3e]" name="beat-lifecycle" type="radio" value="hidden"/>
+<span class="font-label-md text-label-md text-on-surface">Hidden Vault</span>
+</label>
+</div>
+<!-- Danger zone separator -->
+<div class="pt-2 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Administrative Overrides</span>
+<div class="flex items-center gap-2">
+<button class="flex-1 py-1.5 px-2 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+                Unpublish Beat
+              </button>
+<button class="py-1.5 px-3 rounded bg-error-container/20 hover:bg-error-container/40 text-error font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+                Delete
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initAddBeatStudio() {
+    const inputTitle = document.getElementById('input-title');
+    const inputGenre = document.getElementById('input-genre');
+    const inputBpm = document.getElementById('input-bpm');
+    const inputKey = document.getElementById('input-key');
+    const inputBasicPrice = document.getElementById('price-basic');
+
+    const previewTitle = document.getElementById('preview-title');
+    const previewGenrePill = document.getElementById('preview-genre-pill');
+    const previewBpmSpec = document.getElementById('preview-bpm-spec');
+    const previewKeySpec = document.getElementById('preview-key-spec');
+    const previewStartPrice = document.getElementById('preview-start-price');
+
+    // Dynamic mirroring to live storefront preview
+    if (inputTitle && previewTitle) {
+      inputTitle.addEventListener('input', (e) => {
+        previewTitle.textContent = e.target.value.trim() || 'UNTITLED BEAT';
+      });
+    }
+
+    if (inputGenre && previewGenrePill) {
+      inputGenre.addEventListener('change', (e) => {
+        previewGenrePill.textContent = e.target.value.toUpperCase();
+      });
+    }
+
+    if (inputBpm && previewBpmSpec) {
+      inputBpm.addEventListener('input', (e) => {
+        previewBpmSpec.textContent = `${e.target.value || 0} BPM`;
+      });
+    }
+
+    if (inputKey && previewKeySpec) {
+      inputKey.addEventListener('change', (e) => {
+        previewKeySpec.textContent = e.target.value.toUpperCase();
+      });
+    }
+
+    if (inputBasicPrice && previewStartPrice) {
+      inputBasicPrice.addEventListener('input', (e) => {
+        const val = parseFloat(e.target.value);
+        previewStartPrice.textContent = isNaN(val) ? '$0.00' : `$${val.toFixed(2)}`;
+      });
+    }
+
+    // Toggle live status logic
+    const toggleLiveBtn = document.getElementById('toggle-live-status');
+    const statusLabel = document.getElementById('status-label');
+    const statusPip = document.getElementById('status-pip');
+    let isLive = false;
+
+    if (toggleLiveBtn && statusLabel && statusPip) {
+      toggleLiveBtn.addEventListener('click', () => {
+        isLive = !isLive;
+        if (isLive) {
+          statusLabel.textContent = 'Live on Store • Active';
+          statusLabel.classList.add('text-primary');
+          statusLabel.classList.remove('text-on-surface-variant');
+          statusPip.classList.add('bg-primary', 'shadow-[0_0_8px_rgba(229,30,62,0.8)]');
+          statusPip.classList.remove('bg-surface-variant');
+          toggleLiveBtn.textContent = 'Set To Draft';
+        } else {
+          statusLabel.textContent = 'Draft Mode • Unpublished';
+          statusLabel.classList.remove('text-primary');
+          statusLabel.classList.add('text-on-surface-variant');
+          statusPip.classList.remove('bg-primary', 'shadow-[0_0_8px_rgba(229,30,62,0.8)]');
+          statusPip.classList.add('bg-surface-variant');
+          toggleLiveBtn.textContent = 'Push To Store';
+        }
+      });
+    }
+
+    // Interactive tag removal & addition
+    const tagsContainer = document.getElementById('tags-container');
+    const tagInput = document.getElementById('tag-input');
+
+    if (tagsContainer && tagInput) {
+      tagsContainer.addEventListener('click', (e) => {
+        const btn = e.target.closest('.remove-tag');
+        if (btn) {
+          btn.parentElement.remove();
+        }
+      });
+
+      tagInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && tagInput.value.trim() !== '') {
+          e.preventDefault();
+          const cleanTag = tagInput.value.replace(/[^a-zA-Z0-9_-]/g, '').toLowerCase();
+          if (cleanTag) {
+            const pill = document.createElement('span');
+            pill.className = 'inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded font-label-md text-label-md text-on-surface';
+            pill.innerHTML = `#${cleanTag} <button type="button" class="hover:text-primary transition-colors remove-tag"><span class="material-symbols-outlined text-[14px]">close</span></button>`;
+            tagsContainer.insertBefore(pill, tagInput);
+            tagInput.value = '';
+          }
+        }
+      });
+    }
+
+    // Scroll to preview on mobile
+    const previewScrollBtn = document.getElementById('btn-preview-scroll');
+    if (previewScrollBtn) {
+      previewScrollBtn.addEventListener('click', () => {
+        const previewElement = document.getElementById('storefront-cover');
+        if (previewElement) {
+          previewElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    }
+
+    // Play button interactive toggle state
+    const auditionPlayBtn = document.getElementById('play-audition-btn');
+    const previewPlayToggle = document.getElementById('preview-play-toggle');
+    let isPlaying = false;
+
+    function handleAudioToggle() {
+      isPlaying = !isPlaying;
+      const iconName = isPlaying ? 'pause' : 'play_arrow';
+      if (auditionPlayBtn) {
+        auditionPlayBtn.innerHTML = `<span class="material-symbols-outlined text-[22px]">${iconName}</span>`;
+      }
+      if (previewPlayToggle) {
+        previewPlayToggle.innerHTML = `<span class="material-symbols-outlined text-[34px] ${isPlaying ? '' : 'ml-1'}">${iconName}</span>`;
+      }
+    }
+
+    if (auditionPlayBtn) auditionPlayBtn.addEventListener('click', handleAudioToggle);
+    if (previewPlayToggle) previewPlayToggle.addEventListener('click', handleAudioToggle);
+  })();
+</script></main></div></body></html>
