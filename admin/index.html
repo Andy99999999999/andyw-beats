@@ -850,61 +850,120 @@
 </div>
 </div>
 <script>
-  // Producer Quick Ingest Micro-Interaction
-  (function() {
-    const dropZone = document.getElementById('dropZone');
-    const fileInput = document.getElementById('fileInput');
-    const quickUploadBtn = document.getElementById('quickUploadBtn');
+(function () {
 
-    if (dropZone && fileInput) {
-      dropZone.addEventListener('click', () => fileInput.click());
-      
-      ['dragenter', 'dragover'].forEach(eventName => {
-        dropZone.addEventListener(eventName, (e) => {
-          e.preventDefault();
-          dropZone.classList.add('bg-surface-container-high', 'scale-[0.99]');
-        }, false);
-      });
+  const dropZone = document.getElementById('dropZone');
+  const fileInput = document.getElementById('fileInput');
+  const quickUploadBtn = document.getElementById('quickUploadBtn');
 
-      ['dragleave', 'drop'].forEach(eventName => {
-        dropZone.addEventListener(eventName, (e) => {
-          e.preventDefault();
-          dropZone.classList.remove('bg-surface-container-high', 'scale-[0.99]');
-        }, false);
-      });
-
-      dropZone.addEventListener('drop', (e) => {
-        const files = e.dataTransfer.files;
-        if (files.length > 0) {
-          alert('Ingesting: ' + files[0].name + ' into the AndyW Producer Studio Stem Engine...');
-        }
-      });
-fileInput.addEventListener('change', async () => {
-  if (!fileInput.files.length) return;
-
-  const file = fileInput.files[0];
-
-  try {
-    alert('Uploading ' + file.name + '...');
-
-    const filePath =
-      'beats/' + crypto.randomUUID() + '-' + file.name;
-
-    const { data, error } = await supabaseClient
-      .storage
-      .from('beats')
-      .upload(filePath, file);
-
-    if (error) {
-      throw error;
+  // Open file picker
+  function openFilePicker() {
+    if (fileInput) {
+      fileInput.click();
     }
-
-    alert('Upload successful! 🎵\n\n' + file.name);
-
-    console.log('Uploaded:', data);
-
-  } catch (error) {
-    console.error(error);
-    alert('Upload failed:\n\n' + error.message);
   }
-});
+
+  // Upload file to Supabase
+  async function uploadBeatFile(file) {
+
+    if (!file) return;
+
+    try {
+
+      alert('Uploading ' + file.name + '...');
+
+      const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+
+      const filePath =
+        'beats/' + crypto.randomUUID() + '-' + safeName;
+
+      const { data, error } = await supabaseClient
+        .storage
+        .from('beats')
+        .upload(filePath, file);
+
+      if (error) {
+        throw error;
+      }
+
+      alert(
+        'Upload successful! 🎵\n\n' +
+        file.name
+      );
+
+      console.log('Uploaded:', data);
+
+    } catch (error) {
+
+      console.error('Upload error:', error);
+
+      alert(
+        'Upload failed:\n\n' +
+        error.message
+      );
+    }
+  }
+
+  // Upload New Beat button
+  if (quickUploadBtn) {
+    quickUploadBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      openFilePicker();
+    });
+  }
+
+  // Drop zone click
+  if (dropZone) {
+    dropZone.addEventListener('click', function () {
+      openFilePicker();
+    });
+
+    // Drag over
+    dropZone.addEventListener('dragover', function (e) {
+      e.preventDefault();
+      dropZone.classList.add(
+        'bg-surface-container-high',
+        'scale-[0.99]'
+      );
+    });
+
+    // Drag leave
+    dropZone.addEventListener('dragleave', function () {
+      dropZone.classList.remove(
+        'bg-surface-container-high',
+        'scale-[0.99]'
+      );
+    });
+
+    // Drop
+    dropZone.addEventListener('drop', function (e) {
+
+      e.preventDefault();
+
+      dropZone.classList.remove(
+        'bg-surface-container-high',
+        'scale-[0.99]'
+      );
+
+      const files = e.dataTransfer.files;
+
+      if (files.length > 0) {
+        uploadBeatFile(files[0]);
+      }
+    });
+  }
+
+  // File selected from file picker
+  if (fileInput) {
+    fileInput.addEventListener('change', function () {
+
+      if (fileInput.files.length > 0) {
+        uploadBeatFile(fileInput.files[0]);
+      }
+
+    });
+  }
+
+})();
+</script>
