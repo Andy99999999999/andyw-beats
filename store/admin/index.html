@@ -880,52 +880,32 @@
         }
       });
 
-      fileInput.addEventListener('change', () => {
-        if (fileInput.files.length > 0) {
-          alert('Preparing ' + fileInput.files[0].name + ' for multi-track stem tagging...');
-        }
-      });
+      fileInput.addEventListener('change', async () => {
+  if (!fileInput.files.length) return;
+
+  const file = fileInput.files[0];
+
+  try {
+    alert('Uploading ' + file.name + '...');
+
+    const filePath =
+      'beats/' + crypto.randomUUID() + '-' + file.name;
+
+    const { data, error } = await supabaseClient
+      .storage
+      .from('beats')
+      .upload(filePath, file);
+
+    if (error) {
+      throw error;
     }
 
-    if (quickUploadBtn && fileInput) {
-      quickUploadBtn.addEventListener('click', () => fileInput.click());
-    }
-  })();
-</script>
+    alert('Upload successful! 🎵\n\n' + file.name);
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    console.log('Uploaded:', data);
 
-<script>
-  const SUPABASE_URL = "https://wmeanzkyhszhtcenujyz.supabase.co";
-  const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_0mF8Ka8vAYZvn3sBG11GUw_NoGbEK1u";
-
-  const supabaseClient = supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_PUBLISHABLE_KEY
-  );
-
-  console.log("AndyW Beats Supabase connected");
-    supabaseClient.auth.getSession().then(({ data: { session } }) => {
-  if (!session) {
-    const email = prompt("AndyW Beats Admin Login\n\nEnter your admin email:");
-    const password = prompt("Enter your admin password:");
-
-    if (!email || !password) {
-      document.body.innerHTML = "<h1 style='color:white;background:#131315;padding:40px;font-family:sans-serif'>Admin login required.</h1>";
-      return;
-    }
-
-    supabaseClient.auth.signInWithPassword({
-      email: email,
-      password: password
-    }).then(({ error }) => {
-      if (error) {
-        alert("Login failed: " + error.message);
-        location.reload();
-      }
-    });
+  } catch (error) {
+    console.error(error);
+    alert('Upload failed:\n\n' + error.message);
   }
 });
-</script>
-
-</main></div></body></html>
