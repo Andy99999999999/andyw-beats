@@ -905,6 +905,27 @@
   );
 
   console.log("AndyW Beats Supabase connected");
+    supabaseClient.auth.getSession().then(({ data: { session } }) => {
+  if (!session) {
+    const email = prompt("AndyW Beats Admin Login\n\nEnter your admin email:");
+    const password = prompt("Enter your admin password:");
+
+    if (!email || !password) {
+      document.body.innerHTML = "<h1 style='color:white;background:#131315;padding:40px;font-family:sans-serif'>Admin login required.</h1>";
+      return;
+    }
+
+    supabaseClient.auth.signInWithPassword({
+      email: email,
+      password: password
+    }).then(({ error }) => {
+      if (error) {
+        alert("Login failed: " + error.message);
+        location.reload();
+      }
+    });
+  }
+});
 </script>
 
 </main></div></body></html>
