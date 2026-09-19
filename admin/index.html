@@ -879,8 +879,7 @@
           alert('Ingesting: ' + files[0].name + ' into the AndyW Producer Studio Stem Engine...');
         }
       });
-
-         fileInput.addEventListener('change', async () => {
+fileInput.addEventListener('change', async () => {
   if (!fileInput.files.length) return;
 
   const file = fileInput.files[0];
