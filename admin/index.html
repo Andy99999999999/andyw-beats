@@ -880,15 +880,32 @@
         }
       });
 
-      fileInput.addEventListener('change', () => {
-        if (fileInput.files.length > 0) {
-          alert('Preparing ' + fileInput.files[0].name + ' for multi-track stem tagging...');
-        }
-      });
+         fileInput.addEventListener('change', async () => {
+  if (!fileInput.files.length) return;
+
+  const file = fileInput.files[0];
+
+  try {
+    alert('Uploading ' + file.name + '...');
+
+    const filePath =
+      'beats/' + crypto.randomUUID() + '-' + file.name;
+
+    const { data, error } = await supabaseClient
+      .storage
+      .from('beats')
+      .upload(filePath, file);
+
+    if (error) {
+      throw error;
     }
 
-    if (quickUploadBtn && fileInput) {
-      quickUploadBtn.addEventListener('click', () => fileInput.click());
-    }
-  })();
-</script></main></div></body></html>
+    alert('Upload successful! 🎵\n\n' + file.name);
+
+    console.log('Uploaded:', data);
+
+  } catch (error) {
+    console.error(error);
+    alert('Upload failed:\n\n' + error.message);
+  }
+});
