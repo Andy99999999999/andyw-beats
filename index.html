@@ -1,61 +1,57 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
-  tailwind.config = {
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
     darkMode: "class",
     theme: {
       extend: {
         "colors": {
-          "on-background": "#e5e1e4",
-          "on-error": "#690005",
-          "on-error-container": "#ffdad6",
-          "primary": "#ff2a4b",
-          "primary-dim": "#e51e3e",
-          "surface-dim": "#08080b",
-          "surface-container-low": "#0d0d11",
-          "on-secondary-fixed-variant": "#920021",
-          "on-surface": "#f5f3f5",
-          "surface-tint": "#ff2a4b",
-          "on-tertiary-fixed-variant": "#80272e",
-          "primary-fixed-dim": "#ffb3b2",
-          "tertiary-fixed-dim": "#ffb3b3",
-          "surface-container": "#111116",
-          "tertiary": "#ffb3b3",
-          "error": "#ffb4ab",
-          "outline-variant": "#341f22",
-          "secondary-fixed": "#ffdad9",
-          "error-container": "#93000a",
-          "on-surface-variant": "#c4bac0",
-          "surface-container-high": "#181820",
-          "inverse-surface": "#e5e1e4",
-          "on-tertiary-fixed": "#400009",
-          "primary-container": "#e51e3e",
-          "primary-fixed": "#ffdad9",
-          "secondary": "#ffb3b3",
-          "on-secondary": "#680015",
-          "on-secondary-fixed": "#400009",
-          "on-primary-fixed": "#410009",
-          "background": "#060608",
-          "surface-container-lowest": "#030304",
-          "tertiary-container": "#bc555a",
-          "surface-variant": "#222129",
+          "surface-variant": "#353437",
+          "on-primary-fixed-variant": "#920020",
           "on-primary-container": "#fffeff",
-          "on-secondary-container": "#fff1f0",
+          "tertiary": "#ffb3b3",
+          "primary-fixed": "#ffdad9",
+          "on-primary": "#680014",
+          "on-error-container": "#ffdad6",
           "inverse-primary": "#bf002d",
-          "on-primary": "#ffffff",
+          "error": "#ffb4ab",
+          "primary-fixed-dim": "#ffb3b2",
+          "inverse-surface": "#e5e1e4",
+          "primary-container": "#e51e3e",
+          "on-surface": "#e5e1e4",
+          "surface-tint": "#ffb3b2",
+          "secondary-fixed": "#ffdad9",
+          "background": "#131315",
+          "outline": "#ad8887",
+          "primary": "#ffb3b2",
+          "surface-container-low": "#1c1b1e",
+          "surface": "#131315",
+          "on-secondary-fixed": "#400009",
+          "on-secondary": "#680015",
+          "surface-container": "#201f22",
+          "on-tertiary-container": "#fffeff",
+          "on-secondary-fixed-variant": "#920021",
           "secondary-fixed-dim": "#ffb3b3",
           "inverse-on-surface": "#313032",
-          "on-tertiary-container": "#fffeff",
-          "tertiary-fixed": "#ffdad9",
-          "surface-container-highest": "#24232c",
-          "surface-bright": "#2c2a36",
-          "surface": "#09090d",
+          "error-container": "#93000a",
+          "secondary": "#ffb3b3",
+          "outline-variant": "#5d3f3f",
+          "on-background": "#e5e1e4",
+          "on-tertiary-fixed": "#400009",
+          "on-tertiary-fixed-variant": "#80272e",
+          "on-secondary-container": "#fff1f0",
+          "surface-container-highest": "#353437",
           "secondary-container": "#df0138",
+          "tertiary-container": "#bc555a",
+          "on-surface-variant": "#e6bdbc",
+          "surface-dim": "#131315",
+          "surface-bright": "#39393b",
           "on-tertiary": "#61101a",
-          "on-primary-fixed-variant": "#920020",
-          "outline": "#6b4a4e"
+          "tertiary-fixed-dim": "#ffb3b3",
+          "on-error": "#690005",
+          "surface-container-high": "#2a2a2c",
+          "tertiary-fixed": "#ffdad9",
+          "on-primary-fixed": "#410009",
+          "surface-container-lowest": "#0e0e10"
         },
         "borderRadius": {
           "DEFAULT": "0.125rem",
@@ -65,617 +61,834 @@
         },
         "spacing": {
           "gutter": "1.25rem",
+          "margin-desktop": "3.5rem",
           "space-xs": "0.25rem",
-          "margin": "1rem",
           "space-md": "1rem",
           "space-sm": "0.5rem",
-          "gutter-desktop": "1.75rem",
-          "space-xl": "2.5rem",
+          "margin": "1rem",
+          "margin-tablet": "2rem",
           "space-lg": "1.5rem",
-          "margin-desktop": "3.5rem",
-          "margin-tablet": "2rem"
+          "gutter-desktop": "1.75rem",
+          "space-xl": "2.5rem"
         },
         "fontFamily": {
-          "headline-sm": ["Space Grotesk", "sans-serif"],
-          "label-md": ["JetBrains Mono", "monospace"],
-          "body-md": ["Hanken Grotesk", "sans-serif"],
-          "display-hero-mobile": ["Space Grotesk", "sans-serif"],
-          "headline-md": ["Space Grotesk", "sans-serif"],
-          "body-sm": ["Hanken Grotesk", "sans-serif"],
-          "headline-lg-mobile": ["Space Grotesk", "sans-serif"],
-          "label-lg": ["JetBrains Mono", "monospace"],
-          "body-lg": ["Hanken Grotesk", "sans-serif"],
-          "display-hero": ["Space Grotesk", "sans-serif"],
-          "headline-lg": ["Space Grotesk", "sans-serif"],
-          "label-sm": ["JetBrains Mono", "monospace"]
+          "display-hero-mobile": [
+            "Space Grotesk"
+          ],
+          "display-hero": [
+            "Space Grotesk"
+          ],
+          "label-lg": [
+            "JetBrains Mono"
+          ],
+          "label-md": [
+            "JetBrains Mono"
+          ],
+          "headline-sm": [
+            "Space Grotesk"
+          ],
+          "body-md": [
+            "Hanken Grotesk"
+          ],
+          "body-sm": [
+            "Hanken Grotesk"
+          ],
+          "body-lg": [
+            "Hanken Grotesk"
+          ],
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk"
+          ],
+          "headline-lg": [
+            "Space Grotesk"
+          ]
+        },
+        "fontSize": {
+          "display-hero-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "9px",
+            {
+              "lineHeight": "12px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ]
         }
       },
     },
-  }
-</script></head><body class="bg-[#060608] font-body-md text-on-surface antialiased selection:bg-[#e51e3e] selection:text-white"><header class="fixed top-0 left-0 right-0 z-50 bg-[#060608]/95 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.8)]"><div class="h-20 w-full max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6"><div class="flex items-center gap-3 shrink-0"><div class="w-8 h-8 rounded bg-[#111116] border border-[#e51e3e]/40 flex items-center justify-center shadow-[0_0_12px_rgba(229,30,62,0.35)]"><div class="flex items-center gap-[2px] h-4"><span class="w-[2px] h-2 bg-[#ff2a4b] rounded-full"></span><span class="w-[2px] h-4 bg-[#ff2a4b] rounded-full animate-pulse"></span><span class="w-[2px] h-3 bg-[#ff2a4b] rounded-full"></span><span class="w-[2px] h-4 bg-[#ff2a4b] rounded-full"></span></div></div><div class="flex items-baseline gap-1"><span class="font-headline-sm text-headline-sm tracking-tight text-white font-bold uppercase">AndyW</span><span class="font-headline-sm text-headline-sm tracking-widest text-[#ff2a4b] font-extrabold text-[15px] drop-shadow-[0_0_8px_rgba(255,42,75,0.6)]">BEATS</span></div></div><nav class="hidden md:flex items-center gap-1 lg:gap-2"><a aria-current="page" class="relative px-3.5 py-1.5 text-white font-medium font-body-md text-body-md hover:text-white transition-colors" data-path="beats" href="#"><span class="">Beats</span><span class="absolute bottom-0 left-2 right-2 h-[2px] bg-[#ff2a4b] rounded-full shadow-[0_0_10px_rgba(255,42,75,0.9)]"></span></a><a class="px-3.5 py-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/[0.04] transition-colors font-body-md text-body-md" data-path="genres" href="#">Genres</a><a class="px-3.5 py-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/[0.04] transition-colors font-body-md text-body-md" data-path="licenses" href="#">Licenses</a><a class="px-3.5 py-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/[0.04] transition-colors font-body-md text-body-md" data-path="about" href="#">About</a><a class="px-3.5 py-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/[0.04] transition-colors font-body-md text-body-md" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-3 shrink-0"><button aria-label="Search beats" class="flex items-center justify-center w-10 h-10 rounded-lg bg-[#0d0d11] border border-white/5 text-neutral-400 hover:text-white hover:border-[#e51e3e]/30 transition-all" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#0d0d11] border border-white/5 text-neutral-300 hover:text-white hover:border-[#e51e3e]/30 transition-all font-label-md text-label-md" data-path="account" href="#"><span class="material-symbols-outlined text-[18px]">person</span><span class="">Account</span></a><button aria-label="Shopping Cart" class="relative flex items-center justify-center w-10 h-10 rounded-lg bg-[#0d0d11] border border-white/5 text-neutral-300 hover:text-white hover:border-[#e51e3e]/40 transition-all" type="button"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute -top-1 -right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-[#e51e3e] text-white font-label-sm text-[10px] font-bold shadow-[0_0_10px_rgba(229,30,62,0.8)]">2</span></button><div class="pl-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-[#e51e3e]/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAAXWB3fL17LRy3tLcKsrQOfcSEhFRF_pPoX96MdY7c8fQjXqbch1UspFmei_TzrSbCt1u-GnjCWMjLqyomN1OP-V9xEeKAjzeOZeInljaODHeZkQl2JDzLfyszkNmHzVNkl5v3M2bvsze5T8Jno7aAIXxR2nS6lF33j8cJvSToaT0-FYugmcpx5vhmfudKnyaXPg3kgsR_-E59E3qV_VAY4DZKaODVIctD_p-ku4"/></div></div></div></header><main class="w-full pt-20 pb-28 bg-[#060608] min-h-screen relative"><div class="flex flex-col w-full">
-<!-- Top Ambient Crimson Aura (2AM Studio Mood) -->
-<div class="relative w-full overflow-hidden">
-<div class="absolute -top-36 left-1/2 -translate-x-1/2 w-[850px] h-[460px] bg-[radial-gradient(ellipse_at_center,rgba(229,30,62,0.14),rgba(14,6,8,0.05),transparent_75%)] blur-2xl pointer-events-none rounded-full"></div>
-<div class="absolute top-1/3 -left-48 w-96 h-96 bg-[radial-gradient(circle,rgba(229,30,62,0.08),transparent_70%)] blur-3xl pointer-events-none"></div>
-<!-- 1. HERO SECTION -->
-<section class="relative max-w-7xl mx-auto px-6 lg:px-12 pt-10 pb-16 md:pt-16 md:pb-24">
-<div class="flex flex-col items-start max-w-4xl space-y-6">
-<!-- Eyebrow Tag -->
-<div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-[#111116] border border-[#e51e3e]/30 text-neutral-300 font-label-sm text-label-sm uppercase tracking-widest shadow-[0_0_12px_rgba(229,30,62,0.15)]">
-<span class="w-2 h-2 rounded-full bg-[#ff2a4b] animate-pulse shadow-[0_0_8px_rgba(255,42,75,0.9)]"></span>
-<span class="text-neutral-300 text-[10px] font-medium tracking-widest">PRODUCER DISCOGRAPHY &amp; LICENSES</span>
+  }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-body-md text-on-background selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)] z-50 flex items-center justify-between px-space-md lg:px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #e51e3e
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UjnsabfTartzeTG3aKq-xLIBKyvrYzmqYWBd0nPqUQ6oAYnpSWXMeHQt3ps6jFNSnZ_II6Q6SjWk_ebd-OkvdYoENFC6Kn2MOh9wMZ9QOTzltPeAtuYnWgxcnEOSDfl-pU_ZlLlLk0sHmXSveEsLEKTMkKWp79Vzy8PkRLQE82T22L6kXaHMV9DmRAgMlwRmoYmUaPVeIGAdnAdn7SXPr1HV-hwaFt-RGxeGwWzaC1wxqoJK0PhI7SBwE"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase hidden sm:inline">AndyW Beats</span></div><div class="flex items-center px-space-xs py-0.5 bg-primary-container/20 rounded shadow-[0_0_12px_-2px_rgba(229,30,62,0.45)]"><span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Producer Admin</span></div></div><div class="flex items-center gap-space-md"><a class="hidden md:flex items-center text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#"><span class="material-symbols-outlined text-[16px] mr-1">arrow_back</span>Back to Storefront</a><div class="relative flex items-center justify-center"><button class="w-9 h-9 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest animate-pulse"></span></div><div class="h-6 w-px bg-surface-variant hidden sm:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden sm:flex flex-col text-right"><span class="font-headline-sm text-[13px] leading-tight text-on-surface font-semibold">AndyW</span><span class="font-label-sm text-label-sm text-primary uppercase">Master Producer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-xs text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase opacity-60">Production Console</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_15px_-3px_rgba(229,30,62,0.35)]"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 rounded transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_0_15px_-3px_rgba(229,30,62,0.35)]" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Dashboard</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="beats" href="#"><span class="material-symbols-outlined text-[20px]">graphic_eq</span>Beats</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="add-beat" href="#"><span class="material-symbols-outlined text-[20px]">upload_file</span>Add Beat</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span>Orders</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px]">group</span>Customers</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="licenses" href="#"><span class="material-symbols-outlined text-[20px]">verified</span>Licenses</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span>Analytics</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-headline-sm text-body-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span>Settings</a></nav></div><div class="px-space-sm"><div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-2 h-2 rounded-full bg-primary animate-ping"></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Master Bus Online</span></div><span class="font-label-sm text-label-sm text-primary">48kHz/24b</span></div></div></aside><div class="pl-64"><main class="relative w-full pt-16 bg-background min-h-screen px-space-md lg:px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Command & Action Bar -->
+<section class="relative rounded-lg bg-surface-container-lowest p-space-md lg:p-space-lg overflow-hidden shadow-xl">
+<div class="absolute -top-24 -right-16 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">
+<span class="text-primary font-bold">CORE</span>
+<span>/</span>
+<span>ADMIN</span>
+<span>/</span>
+<span class="text-on-surface">DASHBOARD</span>
 </div>
-<!-- Headline -->
-<h1 class="font-headline-lg md:text-[58px] md:leading-[64px] text-[38px] leading-[44px] font-bold tracking-tight text-white uppercase">
-          YOUR SOUND.<br/>
-<span class="text-[#ff2a4b] drop-shadow-[0_0_16px_rgba(255,42,75,0.7)] font-black">YOUR NEXT RECORD.</span>
-</h1>
-<!-- Subheading -->
-<p class="font-body-lg text-body-lg text-neutral-400 max-w-2xl leading-relaxed">Premium R&amp;B, Trap &amp; Hip-Hop beats built for artists who want their records to stand out.</p>
-<!-- CTA Action Buttons -->
-<div class="flex flex-wrap items-center gap-4 pt-2"><a class="px-9 py-4 rounded bg-[#0b0b0f] text-white border border-[#e51e3e] hover:bg-[#e51e3e] hover:border-[#ff2a4b] transition-all duration-300 shadow-[0_0_18px_rgba(229,30,62,0.35)] hover:shadow-[0_0_24px_rgba(255,42,75,0.6)] font-headline-sm text-[15px] font-bold tracking-wider flex items-center gap-2.5" href="#catalog"><span class="material-symbols-outlined text-[20px] text-[#ff2a4b] group-hover:text-white">library_music</span><span class="">BROWSE BEATS</span><span class="material-symbols-outlined text-[18px]">arrow_downward</span></a><button class="px-7 py-4 rounded bg-[#0d0d12] hover:bg-[#14141c] text-neutral-200 hover:text-white font-headline-sm text-[15px] tracking-wide transition-all duration-200 flex items-center gap-2.5 border border-white/10 hover:border-[#e51e3e]/40" id="heroPlayTrigger" type="button"><span class="material-symbols-outlined text-[#ff2a4b] text-[22px] drop-shadow-[0_0_8px_rgba(255,42,75,0.6)]" style="font-variation-settings: 'FILL' 1;">play_circle</span><span class="">LISTEN NOW</span></button></div>
-<!-- Trust Stats Matrix -->
-<div class="w-full pt-10 grid grid-cols-2 md:grid-cols-4 gap-4"><div class="p-4 rounded-lg bg-[#0d0d12] border border-[#261519]/70 hover:border-[#e51e3e]/30 transition-colors flex flex-col space-y-1.5"><div class="flex items-center gap-2 text-[#ff2a4b]"><span class="material-symbols-outlined text-[20px]">bolt</span><span class="font-headline-sm text-headline-sm text-white font-semibold tracking-tight">Instant Delivery</span></div><span class="font-body-sm text-body-sm text-neutral-400 leading-tight">Immediate untagged download links post-checkout</span></div><div class="p-4 rounded-lg bg-[#0d0d12] border border-[#261519]/70 hover:border-[#e51e3e]/30 transition-colors flex flex-col space-y-1.5"><div class="flex items-center gap-2 text-[#ff2a4b]"><span class="material-symbols-outlined text-[20px]">audio_file</span><span class="font-headline-sm text-headline-sm text-white font-semibold tracking-tight">24-Bit WAV + MP3</span></div><span class="font-body-sm text-body-sm text-neutral-400 leading-tight">Studio-grade lossless files and stem trackouts</span></div><div class="p-4 rounded-lg bg-[#0d0d12] border border-[#261519]/70 hover:border-[#e51e3e]/30 transition-colors flex flex-col space-y-1.5"><div class="flex items-center gap-2 text-[#ff2a4b]"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-headline-sm text-headline-sm text-white font-semibold tracking-tight">100% Producer-Owned</span></div><span class="font-body-sm text-body-sm text-neutral-400 leading-tight">Original compositions crafted directly by AndyW</span></div><div class="p-4 rounded-lg bg-[#0d0d12] border border-[#261519]/70 hover:border-[#e51e3e]/30 transition-colors flex flex-col space-y-1.5"><div class="flex items-center gap-2 text-[#ff2a4b]"><span class="material-symbols-outlined text-[20px]">lock</span><span class="font-headline-sm text-headline-sm text-white font-semibold tracking-tight">Secure Checkout</span></div><span class="font-body-sm text-body-sm text-neutral-400 leading-tight">Standardized licensing agreement &amp; instant receipt</span></div></div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">Producer Studio Control</h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-widest animate-pulse">
+            Live Stream
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Master sonic telemetry, rights management &amp; catalog revenue pipeline.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<a class="group px-space-md py-2.5 rounded bg-surface-container hover:bg-surface-container-high transition-all text-on-surface font-headline-sm text-body-md flex items-center gap-2 shadow-sm" href="#storefront">
+<span class="material-symbols-outlined text-[18px] text-primary transition-transform group-hover:scale-110">storefront</span>
+<span>Live Store Preview</span>
+</a>
+<button class="px-space-md py-2.5 rounded bg-primary-container text-on-primary-container font-headline-sm text-body-md font-semibold flex items-center gap-2 shadow-[0_0_24px_-4px_rgba(229,30,62,0.6)] hover:brightness-110 active:scale-95 transition-all" id="quickUploadBtn">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Upload New Beat</span>
+</button>
+</div>
 </div>
 </section>
-<!-- 2. FEATURED BEAT SPOTLIGHT -->
-<section class="max-w-7xl mx-auto px-6 lg:px-12 py-8">
-<div class="flex items-center justify-between pb-6">
-<div class="flex items-center gap-3">
-<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-[#e51e3e]/15 border border-[#e51e3e]/40 text-[#ff2a4b] font-semibold uppercase tracking-wider">Flagship Drop</span>
-<h2 class="font-headline-lg text-headline-lg text-white tracking-tight uppercase">Featured Track Spotlight</h2>
-</div>
-<span class="hidden sm:inline font-label-md text-label-md text-neutral-400 tracking-wider">STUDIO MASTER • V2.4</span>
-</div>
-<div class="relative w-full rounded-xl bg-[#0f0f14] border border-[#e51e3e]/25 p-6 sm:p-8 md:p-10 shadow-[0_0_30px_rgba(229,30,62,0.12)] overflow-hidden">
-<!-- Crimson ambient aura inside console card -->
-<div class="absolute -right-24 -top-24 w-96 h-96 bg-[#e51e3e]/12 rounded-full blur-3xl pointer-events-none"></div>
-<div class="relative flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-<!-- Artwork Module with Vinyl Disc Overlay Effect -->
-<div class="relative shrink-0 w-64 h-64 sm:w-72 sm:h-72 group">
-<div class="absolute -right-4 top-2 w-full h-full rounded-full bg-[#07070a] border border-[#e51e3e]/30 shadow-2xl flex items-center justify-center opacity-85 group-hover:translate-x-3 transition-transform duration-500">
-<div class="w-20 h-20 rounded-full bg-[#111116] border border-white/5 flex items-center justify-center">
-<div class="w-8 h-8 rounded-full bg-[#e51e3e] shadow-[0_0_10px_rgba(229,30,62,0.6)] flex items-center justify-center">
-<div class="w-2.5 h-2.5 rounded-full bg-[#060608]"></div>
+<!-- Metric Pulse Grids -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Stat 1 -->
+<div class="relative rounded-lg bg-surface-container-lowest p-space-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_-5px_rgba(229,30,62,0.35)] shadow-md group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Total Catalog</span>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">library_music</span>
 </div>
 </div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight">42</span>
+<span class="font-headline-sm text-body-lg text-on-surface-variant">Tracks</span>
 </div>
-<img class="relative z-10 w-full h-full object-cover rounded-xl shadow-2xl border border-white/10" data-alt="Moody dark cinematic record artwork with deep obsidian textures, warm amber studio lighting reflecting on gold luxury typography, ambient night cityscape background, sleek underground album cover aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1ZDWEGeUerFwz5G3VI4UCOXEQTeLOVZcrVki1HqhDy8tbBR8u1NMqBXbMk601dlDu6syIwzSpebiA9v-EN7St2N5Kxm2790RTCfgSNUVbLi8uuVIAI5SKM-Dd-2fll69s5iP5vW0k2eyGCUykjlzEBf_8KC7gM_l4VoSPOyeyI6qse04wXEWjZ8b7mO1rE9x7bNZXCRtvU51nAdecob374-vII-4j81kPDKpRTJo"/>
-<div class="absolute z-20 top-3 left-3 bg-[#060608]/85 backdrop-blur-md px-2.5 py-1 rounded font-label-sm text-label-sm text-[#ff2a4b] border border-[#e51e3e]/40 uppercase tracking-widest">Exclusive</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between">
+<span>38 Pub · 3 Draft · 1 Sold</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">+3 mo</span>
 </div>
-<!-- Spotlight Details & Audio Telemetry -->
-<div class="flex-1 w-full space-y-6">
-<div class="space-y-2">
-<span class="font-label-md text-label-md text-[#ff2a4b] tracking-widest uppercase drop-shadow-[0_0_6px_rgba(255,42,75,0.4)]">Dreamy Luxury R&amp;B • AndyW Beats Exclusive</span>
-<h3 class="font-headline-lg md:text-[44px] md:leading-[48px] text-[30px] font-bold text-white tracking-tight uppercase">2AM IN DUBAI</h3>
+<div class="mt-3 w-full bg-surface-container rounded-full h-1 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 90.4%"></div>
 </div>
-<!-- Metadata Badges -->
-<div class="flex flex-wrap items-center gap-2 pt-1">
-<span class="px-3 py-1.5 rounded bg-[#181820] border border-white/5 font-label-sm text-label-sm text-[#ff2a4b] font-medium">140 BPM</span>
-<span class="px-3 py-1.5 rounded bg-[#181820] border border-white/5 font-label-sm text-label-sm text-neutral-300">A MINOR</span>
-<span class="px-3 py-1.5 rounded bg-[#181820] border border-white/5 font-label-sm text-label-sm text-neutral-300">LATE NIGHT R&amp;B</span>
-<span class="px-3 py-1.5 rounded bg-[#181820] border border-white/5 font-label-sm text-label-sm text-neutral-300 flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px] text-[#ff2a4b]">timer</span>03:24
+</div>
+<!-- Stat 2 -->
+<div class="relative rounded-lg bg-surface-container-lowest p-space-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_-5px_rgba(229,30,62,0.35)] shadow-md group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Total Auditions</span>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">hearing</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight">184.2K</span>
+<span class="font-headline-sm text-body-lg text-primary">+14.2%</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between">
+<span>Avg 4.3k/track</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> Surge
+        </span>
+</div>
+<div class="mt-3 w-full bg-surface-container rounded-full h-1 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 74%"></div>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="relative rounded-lg bg-surface-container-lowest p-space-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_-5px_rgba(229,30,62,0.35)] shadow-md group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Active Licenses</span>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight">318</span>
+<span class="font-headline-sm text-body-lg text-on-surface-variant">Issued</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between">
+<span>214 Basic · 89 Prem · 15 Excl</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">98.2% Del</span>
+</div>
+<div class="mt-3 w-full bg-surface-container rounded-full h-1 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="relative rounded-lg bg-surface-container-lowest p-space-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_-5px_rgba(229,30,62,0.35)] shadow-md group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Gross Revenue</span>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight">$18,450.00</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between">
+<span>Net earnings pipeline</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[12px] mr-0.5">north_east</span> +22.4%
+        </span>
+</div>
+<div class="mt-3 w-full bg-surface-container rounded-full h-1 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full shadow-[0_0_8px_rgba(229,30,62,0.7)]" style="width: 88%"></div>
+</div>
+</div>
+</section>
+<!-- Split View: Studio Engine (65%) & Live Operations Dock (35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column (8 of 12 cols = 66%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg min-w-0">
+<!-- Top Performing Beats Rack -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md lg:p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-5 bg-primary-container rounded-sm shadow-[0_0_10px_rgba(229,30,62,0.8)]"></span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-tight">Top Performing Beats</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Ranked by aggregate licensing volume and audience audition traction</p>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container p-1 rounded">
+<button class="px-2.5 py-1 text-on-surface font-label-sm text-label-sm bg-surface-container-high rounded uppercase font-semibold">30 Days</button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm rounded uppercase transition-colors">All Time</button>
+</div>
+</div>
+<!-- Leaderboard Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="text-on-surface-variant font-label-sm text-label-sm uppercase bg-surface-container-low">
+<th class="py-3 px-space-sm rounded-l">Track Designation</th>
+<th class="py-3 px-space-sm">Tuning &amp; Tempo</th>
+<th class="py-3 px-space-sm text-right">Auditions</th>
+<th class="py-3 px-space-sm text-right">Licenses</th>
+<th class="py-3 px-space-sm text-right">Net Yield</th>
+<th class="py-3 px-space-sm">State</th>
+<th class="py-3 px-space-sm text-right rounded-r">Commands</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Rank 1 -->
+<tr class="group hover:bg-surface-container-high/60 transition-colors bg-surface-container/20">
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-primary w-5">#1</span>
+<div class="relative w-10 h-10 rounded overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Dark crimson and obsidian graphic cover art featuring a stylized cyberpunk metallic skull with studio headphones on dark concrete background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU-zGbgUHtULo3JgSNkxodYc-rpddf7o13n5hBRPPFz5ozZDPMBG8vSEnaFJdGhkYuBK5nBg-6KGaGvEURbLsX9n3rrdFy_nOsmvmP-r9GCUY4_ghFWaXyblceQYSO5Noz5tu-Sh15AID_FH7Nb6wkN-dzMUXa9yk-eAAcC3hVxUEzRjLxBudAe5fHCD0gLB1ZU7ZVVMDuMiMk3pmcIkHmeg1008tr5p5n562cJwiV-TKfpE_PC-sr"/>
+<button class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-body-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">SAVAGE FLOW</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Trap Mastery</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-label-md text-label-md text-on-surface">145 BPM <span class="text-on-surface-variant">· D Min</span></td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">42.1K</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">84</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md font-semibold text-primary">$3,140.00</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+                    Published
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Edit Stems">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Detailed Analytics">
+<span class="material-symbols-outlined text-[16px]">bar_chart</span>
+</button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container rounded transition-colors" title="Store Page">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Rank 2 -->
+<tr class="group hover:bg-surface-container-high/60 transition-colors bg-surface-container-low/40">
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface-variant w-5">#2</span>
+<div class="relative w-10 h-10 rounded overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Night cityscape silhouette submerged in deep red and magenta neon haze with analog sound waves running along the horizon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3r1Of52ynGNb-bISZBV4KDWYxDtq0CX3F2IZmbw5Yy0QW_56Gg6Fc192rfSW8BTs6MqFx0jZMVxRtVFiS--TUdtb_tBQURm3CLPHo8v6qVmkZCTOablzJNbI7lRGSJRNdT2JIRnZCihKcxgBH_7wuQ_h0phluSlcEYuVFGYrJsUjsk9KKgMwydffx9Gf5wVAGOtr53mVURwjTdzzl8R81QB_cy9KOnSm8lzBLFJ3D5y6IQlpSClH6"/>
+<button class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-body-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">2AM IN DUBAI</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Dreamy R&amp;B</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-label-md text-label-md text-on-surface">140 BPM <span class="text-on-surface-variant">· A Min</span></td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">38.4K</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">72</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md font-semibold text-primary">$2,890.00</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+                    Published
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">bar_chart</span></button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">open_in_new</span></button>
+</div>
+</td>
+</tr>
+<!-- Rank 3 -->
+<tr class="group hover:bg-surface-container-high/60 transition-colors bg-surface-container/20">
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface-variant w-5">#3</span>
+<div class="relative w-10 h-10 rounded overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Minimalist luxury trap album cover showing polished platinum chains draped over a matte dark obsidian pedestal with glowing red light reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDBpAnwrwS5j4_SLx6BDgCM-A6JMYx7DbEW4A5jE177TqYWKzLhzxieJCu0JTsJ35aEysR5kc5QiOtNlcXNBPrpAP_2-ojQVztPA10Yupz4MLDpDmLWJ_7rwIitidUrr0G_TXVnHiqdJn8YY9HnWCpZgBaPtrrfTWkBJi79hGbt9UdSxgkBDC2qtmIZxW4PHbtAP9l6jCRpFapVdPZ6y2VtpSVjQWM-46ZF97z77rf6xOeaJ-I9pNy"/>
+<button class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-body-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">PLATINUM FLOW</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Luxury Trap</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-label-md text-label-md text-on-surface">142 BPM <span class="text-on-surface-variant">· C Min</span></td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">29.8K</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">56</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md font-semibold text-primary">$2,120.00</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+                    Published
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">bar_chart</span></button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">open_in_new</span></button>
+</div>
+</td>
+</tr>
+<!-- Rank 4 -->
+<tr class="group hover:bg-surface-container-high/60 transition-colors bg-surface-container-low/40">
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface-variant w-5">#4</span>
+<div class="relative w-10 h-10 rounded overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Surreal vintage clock melting over a crimson vinyl record inside an echoing acoustic recording room with dim red lamp light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLR61pVUkAQJCuq651l3jbOwuNlxgah-s7AxjOFzjloBIwLB7SO2ke_-upZso18rY0a3VmE6QXElqmJS-fC9GZuyqBhpp9EoNRW4aXm8R-qEbT7HJyzIIisyOevc3q1V4bI5foWKmx38grvH98IjDzpLFsdtU0YN7MKykNXiER2_8cQBsdVSQ_NZ0lFl8xp052SHjZvrXR9qUSnmI7PkTfyErjmAakjsdfEyQx5cgHpPqSav6NEQ8t"/>
+<button class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-body-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">TIME MOVES SLOW</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Late Night R&amp;B</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-label-md text-label-md text-on-surface">92 BPM <span class="text-on-surface-variant">· F# Min</span></td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">24.1K</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">48</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md font-semibold text-primary">$1,780.00</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+                    Published
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">bar_chart</span></button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">open_in_new</span></button>
+</div>
+</td>
+</tr>
+<!-- Rank 5 -->
+<tr class="group hover:bg-surface-container-high/60 transition-colors bg-surface-container/20">
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface-variant w-5">#5</span>
+<div class="relative w-10 h-10 rounded overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Monochrome dark drill album aesthetic with sharp crimson laser lines cutting across an abstract architectural corridor in complete darkness" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlkMU-AWUTj_brgSYujK-PnCOh1yXU4adirgHAOGrtAnNG_lGS0WFGTkEpOOBySE_xopgaqSX6b6bTCvmNhTQJqrf10Ilz0PGqm9N_RxAS1Zd3JhajPklQCSavXoSpvMPBTWQ2etUB11lpHrll2hpmdw4XvoFGT2ilfhb2TrXtpM3bZHrXX1pGtI7dJ8AczwyQHRWf6i_D0pC4XzI-KtteJbzEMkjZErEHxZWWsyv6grRE8hjLliem"/>
+<button class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-body-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">DARK NOCTURNE</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Dark Drill</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-label-md text-label-md text-on-surface">144 BPM <span class="text-on-surface-variant">· E Min</span></td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">19.5K</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md text-on-surface">1 Excl</td>
+<td class="py-3.5 px-space-sm text-right font-label-md text-label-md font-semibold text-primary">$599.00</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-surface-variant text-on-surface font-bold">
+                    Sold Exclusive
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">bar_chart</span></button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[16px]">lock</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Beat Catalog Releases Table -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md lg:p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-5 bg-primary-container rounded-sm shadow-[0_0_10px_rgba(229,30,62,0.8)]"></span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-tight">Recent Catalog Dispatches</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Full release roster, live lease anchors, and stem archive states</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[16px] text-on-surface-variant">search</span>
+<input class="pl-8 pr-3 py-1.5 bg-surface-container-low rounded text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors w-48 sm:w-60" placeholder="Filter stems, BPM, key..." type="text"/>
+</div>
+<button class="p-1.5 bg-surface-container hover:bg-surface-container-high rounded text-on-surface-variant hover:text-on-surface transition-colors" title="Export CSV">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="text-on-surface-variant font-label-sm text-label-sm uppercase bg-surface-container-low">
+<th class="py-2.5 px-space-sm rounded-l">Artwork &amp; Identity</th>
+<th class="py-2.5 px-space-sm">Sub-Genre</th>
+<th class="py-2.5 px-space-sm">BPM &amp; Scale</th>
+<th class="py-2.5 px-space-sm">Base Tag</th>
+<th class="py-2.5 px-space-sm">Catalog Status</th>
+<th class="py-2.5 px-space-sm text-right rounded-r">Manage</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Catalog Item 1 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Abstract glowing 808 audio waveform in crimson red floating over dark brutalist concrete structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9PDZyxumKbOsp0cT0kCL6PrNgH6ILsH4xtiI9yzQqIFEh5xDeVFhfUlRF1MdCFz-DAwuaQd0aif60i3Xih5s2_MdhYYT5uYFt_OEuBjVBNSGP53WbVa9pdubA32DIXA1P_pYeHEnQMSruW4W6cPbfg1XjqMk8izZZ6M1koduWRxxtOYHmj7BY7F8FN7HBGyq2CEKRdu0AdRzdGrj1NmC7Jw464tko6RiU9txbJHociW4ABW_t4IdZ"/>
+</div>
+<div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold">VENOM PROTOCOL</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">v2_master_clean.wav</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Rage Trap</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-on-surface">150 BPM · F# Min</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-primary font-semibold">$29.99</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Published
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Edit Metadata"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Duplicate Beat"><span class="material-symbols-outlined text-[16px]">content_copy</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Hide from Store"><span class="material-symbols-outlined text-[16px]">visibility_off</span></button>
+<button class="p-1 hover:text-error hover:bg-surface-container-high rounded transition-colors" title="Purge Record"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Catalog Item 2 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Deep crimson neon illuminated vintage drum machine sampler with VU meters glowing red in a dark control room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqNU93Z5W0MI_6c7jV59rpconiWFngUYz_c_WanSnrn0I0mH_sPR8ZrL1lc5GZy-Qhvb3W4RXCr3AUeh3HBEI8CQupuldevCWweDN9UF2n9s0ibC6X9v6fumjudbTICO8SdAtD30fBeLzTWWgz89bGZzmzHxDSO7tZ44LP-r0hDmJYJcex61qU7LjA762vApiT1XO_sOLH0izyl-3esIhVu5gU1ku5e4olYJNC7MxuZgdhcqJc4NgN"/>
+</div>
+<div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold">MIDNIGHT VIBES</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">unmastered_bounce.wav</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Lo-Fi Soul</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-on-surface">86 BPM · Eb Maj</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-primary font-semibold">$34.99</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-surface-container-high text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Draft
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">content_copy</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">visibility</span></button>
+<button class="p-1 hover:text-error hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Catalog Item 3 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Futuristic dark metallic guitar amp with red glowing tubes and industrial studio patch cables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqnUdSVgxZt0YyL5dOtpeGCYu7FdlEJoiRXKRQCo-_376kQW6GezCzG-qxkkADE6_sO6KtAvBFm2tMf4aw6dNMxzS5bhxpQPpgdcSMcfFWF_B-wCGriNC0emNm-amZiNu-y9DWtVWzV_Pt1iBfKd4DI1eJ9AaEAkOksF1lp7HY93hW7OGLdue0ELiR7a_LcXzY6wH0oV9YDy8wdtaxyo0_FZ6ULFPTRTiWPrjrYvq62W7G454NarPq"/>
+</div>
+<div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold">CORONA ECLIPSE</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">final_tracked_out.zip</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Hard Drill</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-on-surface">143 BPM · G Min</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-primary font-semibold">$599.00</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-surface-variant text-on-surface font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Exclusive Sold
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">lock_reset</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">description</span></button>
+<button class="p-1 hover:text-error hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">archive</span></button>
+</div>
+</td>
+</tr>
+<!-- Catalog Item 4 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Geometric vinyl disc reflecting intense crimson red neon spotlight against obsidian tile studio floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVtlKrE4oVX6FBfOOr6-ecPNSxE8cpXSkTicQiLStapI9PiUAGGpznBT1n9ZWD0PgCkPWuenSsAxifsM8iE3gzerDo6CB_HHzMEBA2aB5CUe5D0CgdJi1wDZL1InyCEoZD_FyGHBnimfZsY7WlCKAugVW8jFzLEs1A6o9pMwwFhcf1ImfVhsZpMxRjazcFWtyDjrDz3_yVQn_LPPZohjPAoISSekIVtEMxVtSUFFgbAYgMCbJOmCfg"/>
+</div>
+<div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold">CALLING</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">calling_premaster.wav</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Afro Trap</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-on-surface">104 BPM · B Min</td>
+<td class="py-3 px-space-sm font-label-md text-label-md text-primary font-semibold">$29.99</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-primary-container/20 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Published
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">content_copy</span></button>
+<button class="p-1 hover:text-on-surface hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">visibility_off</span></button>
+<button class="p-1 hover:text-error hover:bg-surface-container-high rounded transition-colors"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Right Column (4 of 12 cols = 33%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Real-Time License Transaction Stream -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-tight">Recent Orders</h3>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase">Live Auth</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verified checkout and automated rights dispatch log</p>
+<div class="mt-space-xs flex flex-col gap-2.5">
+<!-- Sale Item 1 -->
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">album</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">SAVAGE FLOW</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-primary">$79.99</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">@kidd_flamez</span>
+<span>24m ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1 border-t border-surface-variant/40">
+<span class="text-primary-fixed-dim">Premium Stems License</span>
+<span class="text-[11px] text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> WAV+Stems Link
               </span>
 </div>
-<!-- Stylized Glowing Crimson Waveform Visualizer -->
-<div class="space-y-2 pt-2">
-<div class="h-16 w-full bg-[#08080b] border border-white/5 rounded-lg p-2.5 flex items-center gap-[3px] overflow-hidden cursor-pointer group/wave">
-<!-- Active/Played portion (Glowing Crimson) -->
-<span class="h-4 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-7 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-10 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-6 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-12 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_8px_rgba(255,42,75,0.8)]"></span>
-<span class="h-8 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-5 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-9 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-11 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_7px_rgba(255,42,75,0.7)]"></span>
-<span class="h-7 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-10 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_7px_rgba(255,42,75,0.7)]"></span>
-<span class="h-12 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_8px_rgba(255,42,75,0.8)]"></span>
-<span class="h-6 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-8 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-10 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_7px_rgba(255,42,75,0.7)]"></span>
-<span class="h-5 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-8 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-11 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_7px_rgba(255,42,75,0.7)]"></span>
-<span class="h-6 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_6px_rgba(255,42,75,0.7)]"></span>
-<span class="h-12 w-1 bg-[#ff2a4b] rounded-full shadow-[0_0_8px_rgba(255,42,75,0.8)]"></span>
-<!-- Unplayed portion (Dark charcoal) -->
-<span class="h-9 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-7 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-11 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-8 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-4 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-9 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-12 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-7 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-10 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-5 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-11 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-8 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-4 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-10 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-12 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-7 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-9 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-6 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-10 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
-<span class="h-4 w-1 bg-[#222129] rounded-full group-hover/wave:bg-[#e51e3e]/40 transition-colors"></span>
 </div>
-<div class="flex items-center justify-between font-label-sm text-label-sm text-neutral-400">
-<span class="text-[#ff2a4b] font-semibold">01:14</span>
-<span class="">03:24</span>
+<!-- Sale Item 2 -->
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">album</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">2AM IN DUBAI</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-primary">$29.99</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">@marcus_vocal</span>
+<span>1h ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1 border-t border-surface-variant/40">
+<span>Basic Lease</span>
+<span class="text-[11px] text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> MP3 Delivered
+              </span>
 </div>
 </div>
-<!-- Licensing Tiers & Execution -->
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-neutral-400 uppercase tracking-wider">Instant Clearance</span>
-<div class="font-headline-md text-headline-md text-white">
-<span class="text-[#ff2a4b] font-bold">$29.99</span>
-<span class="font-body-sm text-body-sm text-neutral-400">/ MP3 Lease</span>
-<span class="mx-2 text-[#341f22]">|</span>
-<span class="text-white font-semibold">$199.00</span>
-<span class="font-body-sm text-body-sm text-neutral-400">/ Trackout</span>
+<!-- Sale Item 3 (Exclusive) -->
+<div class="p-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-all flex flex-col gap-1.5 group shadow-[0_0_15px_-4px_rgba(229,30,62,0.3)]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">workspace_premium</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">DARK NOCTURNE</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-primary">$599.00</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">@apex_sound_mgmt</span>
+<span>5h ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1 border-t border-surface-variant/40">
+<span class="text-primary font-semibold">Exclusive Buyout</span>
+<span class="text-[11px] text-primary-fixed-dim">Delisted &amp; Archived</span>
 </div>
 </div>
-<div class="flex items-center gap-3">
-<button class="px-4 py-3 rounded bg-[#0d0d12] border border-white/10 text-white hover:border-[#e51e3e]/40 hover:bg-[#15151e] transition-all font-headline-sm text-[14px] font-semibold flex items-center gap-2" type="button">
-<span class="material-symbols-outlined text-[19px]">add_shopping_cart</span>
-<span class="">ADD TO CART</span>
-</button>
-<button class="px-6 py-3 rounded bg-[#09090d] text-white border border-[#e51e3e] font-headline-sm text-[14px] font-bold tracking-wide hover:bg-[#e51e3e] transition-all duration-300 shadow-[0_0_16px_rgba(229,30,62,0.4)] flex items-center gap-2" type="button">
-<span class="material-symbols-outlined text-[19px] text-[#ff2a4b] group-hover:text-white">verified</span>
-<span class="">LICENSE NOW</span>
-</button>
+<!-- Sale Item 4 -->
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">album</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">CALLING</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-primary">$29.99</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">@trey_beats</span>
+<span>8h ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1 border-t border-surface-variant/40">
+<span>Basic Lease</span>
+<span class="text-[11px] text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> MP3 Delivered
+              </span>
 </div>
 </div>
 </div>
+<a class="w-full mt-space-xs py-2 text-center text-primary hover:text-on-primary-container bg-surface-container hover:bg-primary-container font-label-sm text-label-sm uppercase font-semibold rounded transition-all" href="#orders">
+          Inspect All 318 License Contracts
+        </a>
+</section>
+<!-- Quick Upload Drop Zone -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-tight">Audio Ingest Hub</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Studio Upload</span>
+</div>
+<div class="group relative rounded-lg bg-surface-container-low/60 hover:bg-surface-container p-space-lg flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200" id="dropZone">
+<div class="w-12 h-12 rounded-full bg-surface-container group-hover:bg-primary-container flex items-center justify-center text-primary group-hover:text-on-primary-container transition-all group-hover:scale-110 mb-space-sm shadow-[0_0_12px_rgba(229,30,62,0.35)]">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold mb-1">
+            Drop Unmastered Audio Here
+          </div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-space-sm max-w-xs">
+            Lossless WAV, AIFF, or 320kbps MP3. Auto-detected BPM and harmonic root detection enabled.
+          </p>
+<button class="px-space-md py-1.5 rounded bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-sm text-label-sm uppercase font-semibold transition-all">
+            Browse Hard Drive
+          </button>
+<input accept=".mp3,.wav,.aif,.zip" class="hidden" id="fileInput" type="file"/>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant px-1">
+<span>Target Stem Vault: S3 Secure</span>
+<span>Max File: 1.2 GB</span>
+</div>
+</section>
+<!-- Infrastructure & API Health Notice -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md shadow-xl flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Production Engine Telemetry</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Backend API endpoints configured for secure uploads, cloud stem vaults, and automated PDF license generation upon checkout.
+        </p>
+<div class="grid grid-cols-2 gap-2 mt-1 font-label-sm text-label-sm">
+<div class="p-2 rounded bg-surface-container-low flex flex-col gap-0.5">
+<span class="text-on-surface-variant">Stem Vault Latency</span>
+<span class="text-on-surface font-semibold text-primary">28ms (Optimal)</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex flex-col gap-0.5">
+<span class="text-on-surface-variant">Stripe Split Auth</span>
+<span class="text-on-surface font-semibold text-primary">Instant Webhook</span>
 </div>
 </div>
 </section>
-<!-- 3. TRENDING BEATS GRID PREVIEW -->
-<section class="max-w-7xl mx-auto px-6 lg:px-12 py-12 md:py-20" id="catalog">
-<div class="flex flex-col md:flex-row md:items-end justify-between pb-8 gap-4">
-<div>
-<div class="flex items-center gap-2 pb-1">
-<span class="w-1.5 h-1.5 rounded-full bg-[#ff2a4b] shadow-[0_0_6px_rgba(255,42,75,0.8)]"></span>
-<span class="font-label-sm text-label-sm text-[#ff2a4b] uppercase tracking-widest font-semibold">CURATED VAULT</span>
 </div>
-<h2 class="font-headline-lg text-headline-lg text-white tracking-tight uppercase">Trending Sound Architecture</h2>
-</div>
-<div class="flex items-center gap-2">
-<button class="px-3.5 py-1.5 rounded bg-[#e51e3e] text-white font-label-md text-label-md uppercase font-semibold shadow-[0_0_12px_rgba(229,30,62,0.4)]" type="button">All Genres</button>
-<button class="px-3.5 py-1.5 rounded bg-[#0d0d12] border border-white/5 text-neutral-400 hover:text-white hover:border-[#e51e3e]/30 font-label-md text-label-md uppercase transition-colors" type="button">R&amp;B</button>
-<button class="px-3.5 py-1.5 rounded bg-[#0d0d12] border border-white/5 text-neutral-400 hover:text-white hover:border-[#e51e3e]/30 font-label-md text-label-md uppercase transition-colors" type="button">Trap</button>
-<button class="px-3.5 py-1.5 rounded bg-[#0d0d12] border border-white/5 text-neutral-400 hover:text-white hover:border-[#e51e3e]/30 font-label-md text-label-md uppercase transition-colors" type="button">Dark Drill</button>
-</div>
-</div>
-<!-- 6 Track Bento Card Matrix -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Card 1: TIME MOVES SLOW (R&B cover) -->
-<div class="group rounded-xl bg-[#0d0d12] border border-[#1e1e26] p-5 space-y-4 hover:border-[#e51e3e] hover:shadow-[0_0_20px_-3px_rgba(229,30,62,0.4)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-<div class="space-y-3.5">
-<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-[#07070a] border border-white/5">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Late night neon aesthetic album cover, moody indigo and gold tones, minimal typography, luxury music production design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrd8Av5KcE8ZA6qTZN5cppdUQRPb5J9h01dz06eNTtKqxexxC5cd7-pQ-FdhPjViovOiI1d__LyNlnO2-1iUeBJSEcq5HtlnuUFDXmNsD_8gHmQVDdQvOIvE8nk9Rpj7Me90s9EY1AzvVeY_ydsln7G6VuCnBDnhvcTpo5q7EfYI7HsebmR7_VG2mjTteaw_XldF4iJAaS-BaxZhrYQJK9NPXLkBLULdRTCN2Ebio"/>
-<button aria-label="Play TIME MOVES SLOW" class="absolute inset-0 m-auto w-14 h-14 rounded-full bg-[#060608]/90 border border-[#e51e3e] text-[#ff2a4b] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_16px_rgba(229,30,62,0.6)]" type="button">
-<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-</button>
-<span class="absolute bottom-2.5 left-2.5 px-2.5 py-0.5 rounded bg-[#060608]/90 backdrop-blur border border-[#e51e3e]/30 font-label-sm text-label-sm text-[#ff2a4b]">Late Night R&amp;B</span>
-</div>
-<div>
-<div class="flex items-center justify-between">
-<h4 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-[#ff2a4b] transition-colors">TIME MOVES SLOW</h4>
-<span class="font-label-sm text-[10px] text-neutral-400 uppercase tracking-widest px-1.5 py-0.5 rounded bg-[#16161e]">Sensual</span>
-</div>
-<p class="font-label-sm text-label-sm text-neutral-400 pt-0.5">Prod. AndyW</p>
-</div>
-<div class="flex items-center gap-2">
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">92 BPM</span>
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">F# MINOR</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-3 border-t border-white/5">
-<span class="font-headline-sm text-headline-sm text-white font-bold">$29.99</span>
-<div class="flex items-center gap-2">
-<button aria-label="Add to cart" class="w-9 h-9 rounded bg-[#16161e] hover:bg-[#20202a] text-neutral-300 hover:text-white border border-white/5 flex items-center justify-center transition-colors" type="button">
-<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-</button>
-<button class="px-3 py-1.5 rounded bg-[#08080b] border border-[#e51e3e] text-white hover:bg-[#e51e3e] font-label-md text-label-md uppercase tracking-wider transition-all duration-200 shadow-[0_0_10px_rgba(229,30,62,0.3)]" type="button">
-                License
-              </button>
-</div>
-</div>
-</div>
-<!-- Card 2: CALLING (Cartoon Trap Character - Dark Futuristic Hood) -->
-<div class="group rounded-xl bg-[#0d0d12] border border-[#1e1e26] p-5 space-y-4 hover:border-[#e51e3e] hover:shadow-[0_0_20px_-3px_rgba(229,30,62,0.4)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-<div class="space-y-3.5">
-<!-- Pure CSS/SVG Cartoon Trap Vector Art -->
-<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-[#07070a] border border-white/5 flex items-center justify-center">
-<svg class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" viewbox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<radialgradient cx="50%" cy="40%" id="bgGrad1" r="60%">
-<stop offset="0%" stop-color="#2a080f"></stop>
-<stop offset="50%" stop-color="#120407"></stop>
-<stop offset="100%" stop-color="#050508"></stop>
-</radialgradient>
-<filter height="140%" id="crimsonGlow1" width="140%" x="-20%" y="-20%">
-<fegaussianblur result="blur" stddeviation="4"></fegaussianblur>
-<femerge>
-<femergenode in="blur"></femergenode>
-<femergenode in="SourceGraphic"></femergenode>
-</femerge>
-</filter>
-</defs>
-<!-- Background Studio Mist -->
-<rect fill="url(#bgGrad1)" height="240" width="240"></rect>
-<circle cx="120" cy="110" fill="#e51e3e" filter="url(#crimsonGlow1)" opacity="0.12" r="70"></circle>
-<path d="M0,180 Q60,160 120,180 T240,180 L240,240 L0,240 Z" fill="#0d0407" opacity="0.6"></path>
-<!-- Dark Studio Microphone Outline -->
-<rect fill="#24232c" height="24" opacity="0.7" rx="4" stroke="#e51e3e" stroke-width="1" width="8" x="116" y="25"></rect>
-<!-- Trap Character Silhouette / Dreads / Hood -->
-<path d="M60,240 C65,180 85,150 120,150 C155,150 175,180 180,240 Z" fill="#0f0f15" stroke="#ff2a4b" stroke-width="1.5"></path>
-<!-- Hoodie Shadow & Details -->
-<path d="M85,155 Q120,130 155,155 Q120,185 85,155 Z" fill="#171722"></path>
-<!-- Character Head Silhouette -->
-<ellipse cx="120" cy="112" fill="#13131c" rx="34" ry="40"></ellipse>
-<!-- Dreads / Braids with crimson tips -->
-<path d="M88,95 Q75,130 82,160" stroke="#09090e" stroke-linecap="round" stroke-width="6"></path>
-<circle cx="82" cy="160" fill="#ff2a4b" filter="url(#crimsonGlow1)" r="3"></circle>
-<path d="M96,85 Q82,125 90,168" stroke="#09090e" stroke-linecap="round" stroke-width="6"></path>
-<circle cx="90" cy="168" fill="#ff2a4b" r="3"></circle>
-<path d="M144,85 Q158,125 150,168" stroke="#09090e" stroke-linecap="round" stroke-width="6"></path>
-<circle cx="150" cy="168" fill="#ff2a4b" r="3"></circle>
-<path d="M152,95 Q165,130 158,160" stroke="#09090e" stroke-linecap="round" stroke-width="6"></path>
-<circle cx="158" cy="160" fill="#ff2a4b" filter="url(#crimsonGlow1)" r="3"></circle>
-<!-- Red Tinted Cyber Trap Glasses / Goggles -->
-<rect fill="#ff2a4b" filter="url(#crimsonGlow1)" height="11" opacity="0.9" rx="2" width="22" x="94" y="104"></rect>
-<rect fill="#ff2a4b" filter="url(#crimsonGlow1)" height="11" opacity="0.9" rx="2" width="22" x="124" y="104"></rect>
-<line stroke="#ff2a4b" stroke-width="2" x1="116" x2="124" y1="109" y2="109"></line>
-<!-- Iced Chain with Crimson Gem -->
-<path d="M102,175 Q120,205 138,175" stroke="#f0eef5" stroke-dasharray="2,2" stroke-width="2.5"></path>
-<polygon fill="#ff2a4b" filter="url(#crimsonGlow1)" points="120,195 125,203 120,211 115,203"></polygon>
-</svg>
-<button aria-label="Play CALLING" class="absolute inset-0 m-auto w-14 h-14 rounded-full bg-[#060608]/90 border border-[#e51e3e] text-[#ff2a4b] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_16px_rgba(229,30,62,0.6)]" type="button">
-<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-</button>
-<span class="absolute bottom-2.5 left-2.5 px-2.5 py-0.5 rounded bg-[#060608]/90 backdrop-blur border border-[#e51e3e]/30 font-label-sm text-label-sm text-[#ff2a4b]">R&amp;B Trap</span>
-</div>
-<div>
-<div class="flex items-center justify-between">
-<h4 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-[#ff2a4b] transition-colors">CALLING</h4>
-<span class="font-label-sm text-[10px] text-neutral-400 uppercase tracking-widest px-1.5 py-0.5 rounded bg-[#16161e]">Dark / Melodic</span>
-</div>
-<p class="font-label-sm text-label-sm text-neutral-400 pt-0.5">Prod. AndyW</p>
-</div>
-<div class="flex items-center gap-2">
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">140 BPM</span>
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">A MINOR</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-3 border-t border-white/5">
-<span class="font-headline-sm text-headline-sm text-white font-bold">$34.99</span>
-<div class="flex items-center gap-2">
-<button aria-label="Add to cart" class="w-9 h-9 rounded bg-[#16161e] hover:bg-[#20202a] text-neutral-300 hover:text-white border border-white/5 flex items-center justify-center transition-colors" type="button">
-<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-</button>
-<button class="px-3 py-1.5 rounded bg-[#08080b] border border-[#e51e3e] text-white hover:bg-[#e51e3e] font-label-md text-label-md uppercase tracking-wider transition-all duration-200 shadow-[0_0_10px_rgba(229,30,62,0.3)]" type="button">
-                License
-              </button>
-</div>
-</div>
-</div>
-<!-- Card 3: SAVAGE FLOW (Aggressive Cartoon Trap Character with Glowing Red Eyes & 808 Chain) -->
-<div class="group rounded-xl bg-[#0d0d12] border border-[#1e1e26] p-5 space-y-4 hover:border-[#e51e3e] hover:shadow-[0_0_20px_-3px_rgba(229,30,62,0.4)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-<div class="space-y-3.5">
-<!-- Stylized 2D Cartoon Trap Vector Character -->
-<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-[#07070a] border border-white/5 flex items-center justify-center">
-<svg class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" viewbox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<radialgradient cx="50%" cy="50%" id="smokeGrad" r="50%">
-<stop offset="0%" stop-color="#3d0a14"></stop>
-<stop offset="60%" stop-color="#140407"></stop>
-<stop offset="100%" stop-color="#050508"></stop>
-</radialgradient>
-<filter height="140%" id="crimsonNeon" width="140%" x="-20%" y="-20%">
-<fegaussianblur result="blur" stddeviation="3.5"></fegaussianblur>
-<femerge>
-<femergenode in="blur"></femergenode>
-<femergenode in="SourceGraphic"></femergenode>
-</femerge>
-</filter>
-</defs>
-<rect fill="url(#smokeGrad)" height="240" width="240"></rect>
-<!-- Ambient Red Halo / Studio Backlight -->
-<circle cx="120" cy="100" fill="#e51e3e" filter="url(#crimsonNeon)" opacity="0.2" r="65"></circle>
-<!-- Aggressive Trap Character Hoodie Silhouette -->
-<path d="M50,240 C55,165 75,135 120,135 C165,135 185,165 190,240 Z" fill="#09090d" stroke="#e51e3e" stroke-width="1.8"></path>
-<path d="M78,142 C70,105 85,75 120,75 C155,75 170,105 162,142 Z" fill="#12121a" stroke="#ff2a4b" stroke-width="1.2"></path>
-<!-- Face Shadow Contour -->
-<path d="M92,110 C92,145 120,158 120,158 C120,158 148,145 148,110 Z" fill="#0b0b10"></path>
-<!-- Aggressive Glowing Red Eyes -->
-<polygon fill="#ff2a4b" filter="url(#crimsonNeon)" points="98,114 114,116 112,120 99,118"></polygon>
-<polygon fill="#ff2a4b" filter="url(#crimsonNeon)" points="142,114 126,116 128,120 141,118"></polygon>
-<!-- Piercing Pupil Glare -->
-<circle cx="106" cy="116" fill="#ffffff" r="1.5"></circle>
-<circle cx="134" cy="116" fill="#ffffff" r="1.5"></circle>
-<!-- Trap Mask / Bandana Lines -->
-<path d="M102,132 L120,146 L138,132" fill="none" opacity="0.8" stroke="#e51e3e" stroke-width="1.5"></path>
-<!-- Heavy Gold & Crimson Cuban Chain + 808 Emblem -->
-<path d="M94,180 Q120,218 146,180" stroke="#ffcc00" stroke-dasharray="3,1.5" stroke-linecap="round" stroke-width="3"></path>
-<rect fill="#08080c" height="14" rx="2" stroke="#ff2a4b" stroke-width="1.5" width="20" x="110" y="200"></rect>
-<text dominant-baseline="middle" fill="#ff2a4b" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="bold" text-anchor="middle" x="120" y="210">808</text>
-</svg>
-<button aria-label="Play SAVAGE FLOW" class="absolute inset-0 m-auto w-14 h-14 rounded-full bg-[#060608]/90 border border-[#e51e3e] text-[#ff2a4b] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_16px_rgba(229,30,62,0.6)]" type="button">
-<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-</button>
-<span class="absolute bottom-2.5 left-2.5 px-2.5 py-0.5 rounded bg-[#060608]/90 backdrop-blur border border-[#e51e3e]/30 font-label-sm text-label-sm text-[#ff2a4b]">Dark Trap</span>
-</div>
-<div>
-<div class="flex items-center justify-between">
-<h4 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-[#ff2a4b] transition-colors">SAVAGE FLOW</h4>
-<span class="font-label-sm text-[10px] text-neutral-400 uppercase tracking-widest px-1.5 py-0.5 rounded bg-[#16161e]">Aggressive</span>
-</div>
-<p class="font-label-sm text-label-sm text-neutral-400 pt-0.5">Prod. AndyW</p>
-</div>
-<div class="flex items-center gap-2">
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">145 BPM</span>
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">D MINOR</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-3 border-t border-white/5">
-<span class="font-headline-sm text-headline-sm text-white font-bold">$29.99</span>
-<div class="flex items-center gap-2">
-<button aria-label="Add to cart" class="w-9 h-9 rounded bg-[#16161e] hover:bg-[#20202a] text-neutral-300 hover:text-white border border-white/5 flex items-center justify-center transition-colors" type="button">
-<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-</button>
-<button class="px-3 py-1.5 rounded bg-[#08080b] border border-[#e51e3e] text-white hover:bg-[#e51e3e] font-label-md text-label-md uppercase tracking-wider transition-all duration-200 shadow-[0_0_10px_rgba(229,30,62,0.3)]" type="button">
-                License
-              </button>
-</div>
-</div>
-</div>
-<!-- Card 4: MIDNIGHT DRIVE (Atmospheric Melodic Trap Cover) -->
-<div class="group rounded-xl bg-[#0d0d12] border border-[#1e1e26] p-5 space-y-4 hover:border-[#e51e3e] hover:shadow-[0_0_20px_-3px_rgba(229,30,62,0.4)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-<div class="space-y-3.5">
-<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-[#07070a] border border-white/5">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High speed night drive taillight streaks, blurred highway aesthetic with rich amber and charcoal tones, sleek melodic trap visual design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSK8NB_NB0FEc1uzC9ghgxKA4PdSAtLFX2hXeF-Bk3YGaWma28tuKdUmWNDpgVe4sPYFZ40dLItteP2fWDktxJPrdK3TIsxhCB-DHmS3XSNTjcYtT_mcDvjAH-EWIUvVG8iyQnOwLasSEoCDoBvby-2WHpgAlYymroPFjCWj6Z6Fp-WCq_Bx4P14--Z995tlFOHxL6xCCVg-f30_ZbZdA_pC5mdbkG6_754MTefAU"/>
-<button aria-label="Play MIDNIGHT DRIVE" class="absolute inset-0 m-auto w-14 h-14 rounded-full bg-[#060608]/90 border border-[#e51e3e] text-[#ff2a4b] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_16px_rgba(229,30,62,0.6)]" type="button">
-<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-</button>
-<span class="absolute bottom-2.5 left-2.5 px-2.5 py-0.5 rounded bg-[#060608]/90 backdrop-blur border border-[#e51e3e]/30 font-label-sm text-label-sm text-[#ff2a4b]">Melodic Trap</span>
-</div>
-<div>
-<div class="flex items-center justify-between">
-<h4 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-[#ff2a4b] transition-colors">MIDNIGHT DRIVE</h4>
-<span class="font-label-sm text-[10px] text-neutral-400 uppercase tracking-widest px-1.5 py-0.5 rounded bg-[#16161e]">Fast / Moody</span>
-</div>
-<p class="font-label-sm text-label-sm text-neutral-400 pt-0.5">Prod. AndyW</p>
-</div>
-<div class="flex items-center gap-2">
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">130 BPM</span>
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">C# MINOR</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-3 border-t border-white/5">
-<span class="font-headline-sm text-headline-sm text-white font-bold">$29.99</span>
-<div class="flex items-center gap-2">
-<button aria-label="Add to cart" class="w-9 h-9 rounded bg-[#16161e] hover:bg-[#20202a] text-neutral-300 hover:text-white border border-white/5 flex items-center justify-center transition-colors" type="button">
-<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-</button>
-<button class="px-3 py-1.5 rounded bg-[#08080b] border border-[#e51e3e] text-white hover:bg-[#e51e3e] font-label-md text-label-md uppercase tracking-wider transition-all duration-200 shadow-[0_0_10px_rgba(229,30,62,0.3)]" type="button">
-                License
-              </button>
-</div>
-</div>
-</div>
-<!-- Card 5: PLATINUM FLOW (Luxury Cartoon Trap Character with Sunglasses & Crimson Cuban Link) -->
-<div class="group rounded-xl bg-[#0d0d12] border border-[#1e1e26] p-5 space-y-4 hover:border-[#e51e3e] hover:shadow-[0_0_20px_-3px_rgba(229,30,62,0.4)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-<div class="space-y-3.5">
-<!-- Stylized 2D Cartoon Trap Vector Art (Luxury sunglasses & chain) -->
-<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-[#07070a] border border-white/5 flex items-center justify-center">
-<svg class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" viewbox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<radialgradient cx="50%" cy="35%" id="platBg" r="60%">
-<stop offset="0%" stop-color="#2d0a14"></stop>
-<stop offset="60%" stop-color="#0e0a12"></stop>
-<stop offset="100%" stop-color="#040407"></stop>
-</radialgradient>
-<filter height="140%" id="platGlow" width="140%" x="-20%" y="-20%">
-<fegaussianblur result="b" stddeviation="3"></fegaussianblur>
-<femerge>
-<femergenode in="b"></femergenode>
-<femergenode in="SourceGraphic"></femergenode>
-</femerge>
-</filter>
-</defs>
-<rect fill="url(#platBg)" height="240" width="240"></rect>
-<circle cx="120" cy="115" fill="#e51e3e" filter="url(#platGlow)" opacity="0.15" r="55"></circle>
-<!-- Designer Bomber Jacket Shoulders -->
-<path d="M45,240 C55,168 80,145 120,145 C160,145 185,168 195,240 Z" fill="#111118" stroke="#ff2a4b" stroke-width="1.5"></path>
-<path d="M120,145 L120,240" opacity="0.6" stroke="#e51e3e" stroke-width="1.2"></path>
-<!-- Head / Haircut -->
-<rect fill="#181724" height="58" rx="20" width="56" x="92" y="70"></rect>
-<!-- Slick Designer Sunglasses -->
-<path d="M84,98 L156,98 L150,118 L124,118 L120,108 L116,118 L90,118 Z" fill="#07070a" stroke="#ffffff" stroke-width="1"></path>
-<line filter="url(#platGlow)" stroke="#ff2a4b" stroke-width="2" x1="88" x2="114" y1="102" y2="114"></line>
-<line filter="url(#platGlow)" stroke="#ff2a4b" stroke-width="2" x1="126" x2="152" y1="102" y2="114"></line>
-<!-- Diamond Stud Earring -->
-<polygon fill="#ffffff" filter="url(#platGlow)" points="78,110 82,106 86,110 82,114"></polygon>
-<!-- Heavy Triple Cuban Chain -->
-<path d="M96,165 Q120,195 144,165" stroke="#ffffff" stroke-dasharray="2.5,1.5" stroke-width="3"></path>
-<path d="M90,175 Q120,212 150,175" filter="url(#platGlow)" stroke="#ff2a4b" stroke-width="3"></path>
-<!-- Trap Cross Pendant -->
-<path d="M120,205 L120,225 M114,212 L126,212" filter="url(#platGlow)" stroke="#ff2a4b" stroke-linecap="round" stroke-width="3"></path>
-</svg>
-<button aria-label="Play PLATINUM FLOW" class="absolute inset-0 m-auto w-14 h-14 rounded-full bg-[#060608]/90 border border-[#e51e3e] text-[#ff2a4b] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_16px_rgba(229,30,62,0.6)]" type="button">
-<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-</button>
-<span class="absolute bottom-2.5 left-2.5 px-2.5 py-0.5 rounded bg-[#060608]/90 backdrop-blur border border-[#e51e3e]/30 font-label-sm text-label-sm text-[#ff2a4b]">Luxury Trap</span>
-</div>
-<div>
-<div class="flex items-center justify-between">
-<h4 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-[#ff2a4b] transition-colors">PLATINUM FLOW</h4>
-<span class="font-label-sm text-[10px] text-neutral-400 uppercase tracking-widest px-1.5 py-0.5 rounded bg-[#16161e]">Hype / Flamboyant</span>
-</div>
-<p class="font-label-sm text-label-sm text-neutral-400 pt-0.5">Prod. AndyW</p>
-</div>
-<div class="flex items-center gap-2">
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">142 BPM</span>
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">C MINOR</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-3 border-t border-white/5">
-<span class="font-headline-sm text-headline-sm text-white font-bold">$39.99</span>
-<div class="flex items-center gap-2">
-<button aria-label="Add to cart" class="w-9 h-9 rounded bg-[#16161e] hover:bg-[#20202a] text-neutral-300 hover:text-white border border-white/5 flex items-center justify-center transition-colors" type="button">
-<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-</button>
-<button class="px-3 py-1.5 rounded bg-[#08080b] border border-[#e51e3e] text-white hover:bg-[#e51e3e] font-label-md text-label-md uppercase tracking-wider transition-all duration-200 shadow-[0_0_10px_rgba(229,30,62,0.3)]" type="button">
-                License
-              </button>
-</div>
-</div>
-</div>
-<!-- Card 6: DRILL NOCTURNE (Dark Hooded Drill Character with Mask & Crimson Highlights) -->
-<div class="group rounded-xl bg-[#0d0d12] border border-[#1e1e26] p-5 space-y-4 hover:border-[#e51e3e] hover:shadow-[0_0_20px_-3px_rgba(229,30,62,0.4)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-<div class="space-y-3.5">
-<!-- Stylized 2D Cartoon Drill Mask Vector Artwork -->
-<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-[#07070a] border border-white/5 flex items-center justify-center">
-<svg class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" viewbox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<radialgradient cx="50%" cy="40%" id="drillBg" r="55%">
-<stop offset="0%" stop-color="#30070f"></stop>
-<stop offset="70%" stop-color="#0a0a0f"></stop>
-<stop offset="100%" stop-color="#040406"></stop>
-</radialgradient>
-<filter height="140%" id="crimsonFlare" width="140%" x="-20%" y="-20%">
-<fegaussianblur result="glow" stddeviation="3.5"></fegaussianblur>
-<femerge>
-<femergenode in="glow"></femergenode>
-<femergenode in="SourceGraphic"></femergenode>
-</femerge>
-</filter>
-</defs>
-<rect fill="url(#drillBg)" height="240" width="240"></rect>
-<!-- Drill Puffer Jacket Silhouette -->
-<path d="M40,240 C45,175 75,145 120,145 C165,145 195,175 200,240 Z" fill="#09090d" stroke="#e51e3e" stroke-width="1.8"></path>
-<!-- Hood Arch -->
-<path d="M72,145 C65,85 85,55 120,55 C155,55 175,85 168,145 Z" fill="#121118" stroke="#ff2a4b" stroke-width="1.2"></path>
-<!-- Face Mask with Drill Teeth/Slash Graphic -->
-<path d="M96,120 L120,152 L144,120 L120,108 Z" fill="#060608" stroke="#ff2a4b" stroke-width="1.5"></path>
-<line filter="url(#crimsonFlare)" stroke="#ff2a4b" stroke-width="2" x1="104" x2="136" y1="126" y2="126"></line>
-<line filter="url(#crimsonFlare)" stroke="#ff2a4b" stroke-width="2" x1="108" x2="132" y1="134" y2="134"></line>
-<line filter="url(#crimsonFlare)" stroke="#ff2a4b" stroke-width="2" x1="114" x2="126" y1="142" y2="142"></line>
-<!-- Dark Beanie Trim / Eyes Slit -->
-<rect fill="#040407" height="12" rx="2" width="52" x="94" y="96"></rect>
-<circle cx="106" cy="102" fill="#ff2a4b" filter="url(#crimsonFlare)" r="2.5"></circle>
-<circle cx="134" cy="102" fill="#ff2a4b" filter="url(#crimsonFlare)" r="2.5"></circle>
-<!-- Red Puffer Baffle Lines -->
-<path d="M60,195 Q120,175 180,195" opacity="0.5" stroke="#e51e3e" stroke-width="1"></path>
-<path d="M50,225 Q120,205 190,225" opacity="0.5" stroke="#e51e3e" stroke-width="1"></path>
-</svg>
-<button aria-label="Play DRILL NOCTURNE" class="absolute inset-0 m-auto w-14 h-14 rounded-full bg-[#060608]/90 border border-[#e51e3e] text-[#ff2a4b] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_16px_rgba(229,30,62,0.6)]" type="button">
-<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-</button>
-<span class="absolute bottom-2.5 left-2.5 px-2.5 py-0.5 rounded bg-[#060608]/90 backdrop-blur border border-[#e51e3e]/30 font-label-sm text-label-sm text-[#ff2a4b]">Dark Drill</span>
-</div>
-<div>
-<div class="flex items-center justify-between">
-<h4 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-[#ff2a4b] transition-colors">DRILL NOCTURNE</h4>
-<span class="font-label-sm text-[10px] text-neutral-400 uppercase tracking-widest px-1.5 py-0.5 rounded bg-[#16161e]">Gritty / Menacing</span>
-</div>
-<p class="font-label-sm text-label-sm text-neutral-400 pt-0.5">Prod. AndyW</p>
-</div>
-<div class="flex items-center gap-2">
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">144 BPM</span>
-<span class="px-2 py-1 rounded bg-[#16161e] border border-white/5 font-label-sm text-label-sm text-neutral-300">E MINOR</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-3 border-t border-white/5">
-<span class="font-headline-sm text-headline-sm text-white font-bold">$32.99</span>
-<div class="flex items-center gap-2">
-<button aria-label="Add to cart" class="w-9 h-9 rounded bg-[#16161e] hover:bg-[#20202a] text-neutral-300 hover:text-white border border-white/5 flex items-center justify-center transition-colors" type="button">
-<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-</button>
-<button class="px-3 py-1.5 rounded bg-[#08080b] border border-[#e51e3e] text-white hover:bg-[#e51e3e] font-label-md text-label-md uppercase tracking-wider transition-all duration-200 shadow-[0_0_10px_rgba(229,30,62,0.3)]" type="button">
-                License
-              </button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 4. VALUE PROPOSITION ROW -->
-<section class="max-w-7xl mx-auto px-6 lg:px-12 py-12">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="p-8 rounded-xl bg-[#0d0d12] border border-[#1e1e26] hover:border-[#e51e3e]/40 transition-colors space-y-4 shadow-lg">
-<div class="w-12 h-12 rounded bg-[#16161e] border border-[#e51e3e]/30 flex items-center justify-center text-[#ff2a4b] shadow-[0_0_12px_rgba(229,30,62,0.25)]">
-<span class="material-symbols-outlined text-[24px]">cloud_download</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-white font-semibold">Instant Digital Delivery</h3>
-<p class="font-body-md text-body-md text-neutral-400 leading-relaxed">
-            Gain immediate access to untagged 24-bit 48kHz WAV audio files, MP3 previews, and isolated studio stems directly after checkout.
-          </p>
-</div>
-<div class="p-8 rounded-xl bg-[#0d0d12] border border-[#1e1e26] hover:border-[#e51e3e]/40 transition-colors space-y-4 shadow-lg">
-<div class="w-12 h-12 rounded bg-[#16161e] border border-[#e51e3e]/30 flex items-center justify-center text-[#ff2a4b] shadow-[0_0_12px_rgba(229,30,62,0.25)]">
-<span class="material-symbols-outlined text-[24px]">verified_user</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-white font-semibold">Clear Commercial Licensing</h3>
-<p class="font-body-md text-body-md text-neutral-400 leading-relaxed">
-            Keep 100% of your royalties on digital streaming platforms like Spotify and Apple Music. No hidden clawbacks or confusing rights.
-          </p>
-</div>
-<div class="p-8 rounded-xl bg-[#0d0d12] border border-[#1e1e26] hover:border-[#e51e3e]/40 transition-colors space-y-4 shadow-lg">
-<div class="w-12 h-12 rounded bg-[#16161e] border border-[#e51e3e]/30 flex items-center justify-center text-[#ff2a4b] shadow-[0_0_12px_rgba(229,30,62,0.25)]">
-<span class="material-symbols-outlined text-[24px]">tune</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-white font-semibold">Custom Stems &amp; Arrangement</h3>
-<p class="font-body-md text-body-md text-neutral-400 leading-relaxed">
-            Every production package comes structured for vocals, with seamless arrangement variations and individual trackouts ready for engineering.
-          </p>
-</div>
-</div>
-</section>
-<!-- 5. CALL TO ACTION BANNER -->
-<section class="max-w-7xl mx-auto px-6 lg:px-12 pt-6 pb-20">
-<div class="relative w-full rounded-2xl bg-[#0d0d12] border border-[#e51e3e]/40 p-8 md:p-14 shadow-[0_0_30px_rgba(229,30,62,0.15)] overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
-<!-- Background decorative ambient crimson glow -->
-<div class="absolute top-0 right-0 w-96 h-full bg-[#e51e3e]/10 blur-3xl pointer-events-none"></div>
-<div class="relative space-y-3 max-w-2xl">
-<div class="inline-flex items-center gap-2 font-label-sm text-label-sm text-[#ff2a4b] uppercase tracking-widest font-semibold">
-<span class="material-symbols-outlined text-[16px]">record_voice_over</span>
-<span class="">CUSTOM SOUND DESIGN</span>
-</div>
-<h2 class="font-headline-lg md:text-[36px] md:leading-[44px] text-[26px] font-bold text-white tracking-tight uppercase">
-            Need a custom beat or exclusive arrangement?
-          </h2>
-<p class="font-body-md text-body-md text-neutral-400">
-            Work directly with AndyW to construct your record from scratch, tailored specifically to your vocal range, sonic tone, and release vision.
-          </p>
-</div>
-<div class="relative shrink-0 w-full md:w-auto">
-<a class="w-full md:w-auto px-8 py-4 rounded bg-[#09090d] text-white border border-[#e51e3e] font-headline-sm text-headline-sm font-bold tracking-wide hover:bg-[#e51e3e] transition-all duration-300 shadow-[0_0_20px_rgba(229,30,62,0.45)] flex items-center justify-center gap-2.5 group" href="#">
-<span class="">BOOK CUSTOM PRODUCTION</span>
-<span class="material-symbols-outlined text-[20px] text-[#ff2a4b] group-hover:text-white transition-colors">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
 </div>
 </div>
 <script>
-  const heroTrigger = document.getElementById('heroPlayTrigger');
-  if (heroTrigger) {
-    heroTrigger.addEventListener('click', () => {
-      const dockedPlayer = document.querySelector('aside[aria-label="Docked Audio Player"]');
-      if (dockedPlayer) {
-        dockedPlayer.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  }
-</script></main><footer class="w-full bg-[#040406] border-t border-white/5 py-16"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12"><div class="space-y-4"><div class="flex items-center gap-3"><div class="w-7 h-7 rounded bg-[#111116] border border-[#e51e3e]/40 flex items-center justify-center shadow-[0_0_10px_rgba(229,30,62,0.3)]"><div class="flex items-center gap-[2px] h-3.5"><span class="w-[2px] h-2 bg-[#ff2a4b] rounded-full"></span><span class="w-[2px] h-3.5 bg-[#ff2a4b] rounded-full"></span><span class="w-[2px] h-2 bg-[#ff2a4b] rounded-full"></span></div></div><div class="flex items-baseline gap-1"><span class="font-headline-sm text-headline-sm tracking-tight text-white font-bold uppercase">AndyW</span><span class="font-headline-sm text-headline-sm tracking-widest text-[#ff2a4b] font-bold text-[14px]">BEATS</span></div></div><p class="text-neutral-400 font-body-sm text-body-sm leading-relaxed">Elite underground sound architecture, tailored sonic curation, and high-ticket beat licensing. Crafted in 2AM studio grade acoustics for charting recording artists worldwide.</p></div><div class="space-y-3"><span class="font-headline-sm text-headline-sm text-white block font-semibold">Quick Links</span><ul class="space-y-2 font-body-sm text-body-sm text-neutral-400"><li class=""><a class="hover:text-[#ff2a4b] transition-colors" data-path="beats" href="#">Production Catalog</a></li><li class=""><a class="hover:text-[#ff2a4b] transition-colors" data-path="licenses" href="#">Licensing Agreements</a></li><li class=""><a class="hover:text-[#ff2a4b] transition-colors" data-path="about" href="#">Mastering Standards</a></li><li class=""><a class="hover:text-[#ff2a4b] transition-colors" data-path="contact" href="#">Direct Studio Booking</a></li></ul></div><div class="space-y-3"><span class="font-headline-sm text-headline-sm text-white block font-semibold">Genre Directory</span><ul class="space-y-2 font-body-sm text-body-sm text-neutral-400"><li class=""><a class="hover:text-[#ff2a4b] transition-colors" data-path="genres" href="#">Late Night R&amp;B</a></li><li class=""><a class="hover:text-[#ff2a4b] transition-colors" data-path="genres" href="#">Melodic Trap</a></li><li class=""><a class="hover:text-[#ff2a4b] transition-colors" data-path="genres" href="#">Drill &amp; Dark Trap</a></li><li class=""><a class="hover:text-[#ff2a4b] transition-colors" data-path="genres" href="#">Atmospheric Hip-Hop</a></li></ul></div><div class="space-y-3"><span class="font-headline-sm text-headline-sm text-white block font-semibold">Connect &amp; Stems</span><p class="font-body-sm text-body-sm text-neutral-400">andyw@andywbeats.com</p><div class="flex items-center gap-3 pt-2"><a aria-label="YouTube" class="flex items-center justify-center w-9 h-9 rounded bg-[#101017] border border-white/5 text-neutral-400 hover:text-[#ff2a4b] hover:border-[#e51e3e]/40 transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">smart_display</span></a><a aria-label="Instagram" class="flex items-center justify-center w-9 h-9 rounded bg-[#101017] border border-white/5 text-neutral-400 hover:text-[#ff2a4b] hover:border-[#e51e3e]/40 transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a aria-label="Beatstars" class="flex items-center justify-center w-9 h-9 rounded bg-[#101017] border border-white/5 text-neutral-400 hover:text-[#ff2a4b] hover:border-[#e51e3e]/40 transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">graphic_eq</span></a><a aria-label="Spotify" class="flex items-center justify-center w-9 h-9 rounded bg-[#101017] border border-white/5 text-neutral-400 hover:text-[#ff2a4b] hover:border-[#e51e3e]/40 transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">headphones</span></a></div></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-neutral-400 border-t border-white/5"><p class="">© 2025 AndyW Beats. All sonic masters and intellectual property reserved.</p><p class="text-neutral-400">Mastered at 48kHz 24-bit Lossless Stems</p></div></div></footer><aside aria-label="Docked Audio Player" class="fixed bottom-0 left-0 right-0 z-50 h-20 bg-[#060608]/95 backdrop-blur-2xl border-t border-[#1e1e26] shadow-[0_-4px_24px_rgba(0,0,0,0.8)]"><div class="absolute top-0 left-0 right-0 h-[2px] bg-[#1a1a24]"><div class="h-full bg-[#ff2a4b] w-[35.5%] shadow-[0_0_8px_rgba(255,42,75,0.9)]"></div></div><div class="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-3.5 min-w-0 flex-1 max-w-xs md:max-w-sm"><div class="relative w-12 h-12 rounded bg-[#111116] border border-[#e51e3e]/30 shrink-0 overflow-hidden flex items-center justify-center shadow-[0_0_10px_rgba(229,30,62,0.2)]"><span class="material-symbols-outlined text-[#ff2a4b] text-[24px]">album</span></div><div class="min-w-0"><div class="font-headline-sm text-headline-sm text-white truncate font-semibold">2AM IN DUBAI</div><div class="font-label-sm text-label-sm text-neutral-400 truncate flex items-center gap-1.5"><span class="">Dreamy R&amp;B</span><span class="">•</span><span class="text-[#ff2a4b] font-medium">140 BPM</span><span class="">•</span><span class="">A Minor</span></div></div></div><div class="hidden md:flex flex-col items-center gap-1.5 flex-1 max-w-md"><div class="flex items-center gap-5"><button aria-label="Previous Beat" class="text-neutral-400 hover:text-white transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">skip_previous</span></button><button aria-label="Pause Beat" class="w-10 h-10 rounded-full bg-[#0a0a0e] border border-[#ff2a4b] text-[#ff2a4b] flex items-center justify-center hover:bg-[#ff2a4b] hover:text-white transition-all active:scale-95 shadow-[0_0_14px_rgba(255,42,75,0.5)]" type="button"><span class="material-symbols-outlined text-[22px]">pause</span></button><button aria-label="Next Beat" class="text-neutral-400 hover:text-white transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">skip_next</span></button></div><div class="w-full flex items-center gap-2.5"><span class="font-label-sm text-label-sm text-neutral-400 w-9 text-right font-mono">01:14</span><div class="flex-1 h-3 flex items-center gap-[2px] cursor-pointer py-1"><span class="h-2 w-1 rounded-full bg-[#ff2a4b] shadow-[0_0_4px_rgba(255,42,75,0.6)]"></span><span class="h-3 w-1 rounded-full bg-[#ff2a4b] shadow-[0_0_4px_rgba(255,42,75,0.6)]"></span><span class="h-1.5 w-1 rounded-full bg-[#ff2a4b]"></span><span class="h-2.5 w-1 rounded-full bg-[#ff2a4b] shadow-[0_0_4px_rgba(255,42,75,0.6)]"></span><span class="h-3 w-1 rounded-full bg-[#ff2a4b] shadow-[0_0_4px_rgba(255,42,75,0.6)]"></span><span class="h-2 w-1 rounded-full bg-[#ff2a4b]"></span><span class="h-1.5 w-1 rounded-full bg-[#2e2e38]"></span><span class="h-2.5 w-1 rounded-full bg-[#2e2e38]"></span><span class="h-3 w-1 rounded-full bg-[#2e2e38]"></span><span class="h-2 w-1 rounded-full bg-[#2e2e38]"></span><span class="h-1.5 w-1 rounded-full bg-[#2e2e38]"></span><span class="h-2.5 w-1 rounded-full bg-[#2e2e38]"></span><span class="h-3 w-1 rounded-full bg-[#2e2e38]"></span><span class="h-1 w-1 rounded-full bg-[#2e2e38]"></span></div><span class="font-label-sm text-label-sm text-neutral-400 w-9 font-mono">03:28</span></div></div><div class="flex items-center gap-3 sm:gap-4 shrink-0"><div class="hidden lg:flex items-center gap-2 text-neutral-400"><span class="material-symbols-outlined text-[18px]">volume_up</span><div class="w-16 h-1 rounded-full bg-[#24232c]"><div class="w-3/4 h-full rounded-full bg-[#ff2a4b]"></div></div></div><button aria-label="Play or Pause" class="md:hidden w-10 h-10 rounded-full bg-[#0a0a0e] border border-[#ff2a4b] text-[#ff2a4b] flex items-center justify-center shadow-[0_0_12px_rgba(255,42,75,0.4)]" type="button"><span class="material-symbols-outlined text-[20px]">pause</span></button><button class="px-4 py-2 rounded bg-[#09090d] text-white border border-[#e51e3e] hover:bg-[#e51e3e] transition-all font-headline-sm text-headline-sm font-bold tracking-wide shadow-[0_0_12px_rgba(229,30,62,0.3)] flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[18px] text-[#ff2a4b] group-hover:text-white">shopping_cart_checkout</span><span class="">LEASE $29.99</span></button></div></div></aside>
-</body></html>
+  // Producer Quick Ingest Micro-Interaction
+  (function() {
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const quickUploadBtn = document.getElementById('quickUploadBtn');
+
+    if (dropZone && fileInput) {
+      dropZone.addEventListener('click', () => fileInput.click());
+      
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.classList.add('bg-surface-container-high', 'scale-[0.99]');
+        }, false);
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.classList.remove('bg-surface-container-high', 'scale-[0.99]');
+        }, false);
+      });
+
+      dropZone.addEventListener('drop', (e) => {
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+          alert('Ingesting: ' + files[0].name + ' into the AndyW Producer Studio Stem Engine...');
+        }
+      });
+
+      fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+          alert('Preparing ' + fileInput.files[0].name + ' for multi-track stem tagging...');
+        }
+      });
+    }
+
+    if (quickUploadBtn && fileInput) {
+      quickUploadBtn.addEventListener('click', () => fileInput.click());
+    }
+  })();
+</script></main></div></body></html>
